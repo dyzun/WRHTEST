@@ -28,9 +28,9 @@ MERGED from [com.android.support:support-v4:23.3.0] C:\Users\Mike\AndroidStudioP
 	android:icon
 		ADDED from C:\Users\Mike\AndroidStudioProjects\SlidingTabsBasic\SlidingTabsBasic\Application\src\main\AndroidManifest.xml:24:9-45
 	android:theme
-		ADDED from C:\Users\Mike\AndroidStudioProjects\SlidingTabsBasic\SlidingTabsBasic\Application\src\main\AndroidManifest.xml:26:9-56
+		ADDED from C:\Users\Mike\AndroidStudioProjects\SlidingTabsBasic\SlidingTabsBasic\Application\src\main\AndroidManifest.xml:26:9-53
 activity#com.example.android.slidingtabsbasic.MainActivity
-ADDED from C:\Users\Mike\AndroidStudioProjects\SlidingTabsBasic\SlidingTabsBasic\Application\src\main\AndroidManifest.xml:27:9-35:20
+ADDED from C:\Users\Mike\AndroidStudioProjects\SlidingTabsBasic\SlidingTabsBasic\Application\src\main\AndroidManifest.xml:27:5-35:20
 	android:label
 		ADDED from C:\Users\Mike\AndroidStudioProjects\SlidingTabsBasic\SlidingTabsBasic\Application\src\main\AndroidManifest.xml:29:13-45
 	android:name
