@@ -50,7 +50,7 @@ public class CustomExpandableListAdapter extends BaseExpandableListAdapter {
 
             //SET CHILD NAME
             TextView nameTv=(TextView) convertView.findViewById(R.id.textView1);
-            ImageView img=(ImageView) convertView.findViewById(R.id.imageView1);
+            //ImageView img=(ImageView) convertView.findViewById(R.id.imageView1);
 
             nameTv.setText(child);
 

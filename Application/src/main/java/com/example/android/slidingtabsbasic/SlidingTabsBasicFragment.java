@@ -104,15 +104,13 @@ public class SlidingTabsBasicFragment extends Fragment {
         };
         @Override
         public Object instantiateItem(ViewGroup container, int position) {
-            View view = getActivity().getLayoutInflater().inflate(R.layout.pager_item,
-                    container, false);
+            View view = getActivity().getLayoutInflater().inflate(R.layout.pager_item, container, false);
 
             container.addView(view);
 
             // Retrieve a TextView from the inflated View, and update it's text
             //TODO insert expandable list here
             ExpandableListView elv=(ExpandableListView) getActivity().findViewById(R.id.expandableListView1);
-
             final ArrayList<Coupons> Coupons=getData();
 
             //CREATE AND BIND TO ADAPTER
@@ -163,23 +161,16 @@ public class SlidingTabsBasicFragment extends Fragment {
         private ArrayList<Coupons> getData()
         {
 
-            Coupons t1=new Coupons("Man Utd");
-            t1.deals.add("Wayne Rooney");
-            t1.deals.add("Van Persie");
-            t1.deals.add("Ander Herera");
-            t1.deals.add("Juan Mata");
+            Coupons t1=new Coupons("Coupon 1");
+            t1.deals.add("Description of coupon 1\n");
 
-            Coupons t2=new Coupons("Arsenal");
-            t2.deals.add("Aaron Ramsey");
-            t2.deals.add("Mesut Ozil");
-            t2.deals.add("Jack Wilshere");
-            t2.deals.add("Alexis Sanchez");
+            Coupons t2=new Coupons("Coupon 2");
+            t2.deals.add("Description of coupon 2\n");
 
-            Coupons t3=new Coupons("Chelsea");
-            t3.deals.add("John Terry");
-            t3.deals.add("Eden Hazard");
-            t3.deals.add("Diego Costa");
-            t3.deals.add("Oscar");
+
+            Coupons t3=new Coupons("Coupon 3");
+            t3.deals.add("Description of coupon 3\n");
+
 
             ArrayList<Coupons> allCoupons=new ArrayList<Coupons>();
             allCoupons.add(t1);
