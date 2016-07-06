@@ -1628,18 +1628,21 @@ containing a value of this type.
         public static final int abc_textfield_search_activated_mtrl_alpha=0x7f020038;
         public static final int abc_textfield_search_default_mtrl_alpha=0x7f020039;
         public static final int abc_textfield_search_material=0x7f02003a;
-        public static final int drawer_shadow=0x7f02003b;
-        public static final int ic_drawer=0x7f02003c;
-        public static final int ic_launcher=0x7f02003d;
-        public static final int pic1=0x7f02003e;
-        public static final int pic2=0x7f02003f;
-        public static final int pic3=0x7f020040;
-        public static final int pic4=0x7f020041;
-        public static final int pic5=0x7f020042;
-        public static final int pic6=0x7f020043;
-        public static final int pic7=0x7f020044;
-        public static final int pic8=0x7f020045;
-        public static final int tile=0x7f020046;
+        public static final int cop1=0x7f02003b;
+        public static final int cop2=0x7f02003c;
+        public static final int cop3=0x7f02003d;
+        public static final int drawer_shadow=0x7f02003e;
+        public static final int ic_drawer=0x7f02003f;
+        public static final int ic_launcher=0x7f020040;
+        public static final int pic1=0x7f020041;
+        public static final int pic2=0x7f020042;
+        public static final int pic3=0x7f020043;
+        public static final int pic4=0x7f020044;
+        public static final int pic5=0x7f020045;
+        public static final int pic6=0x7f020046;
+        public static final int pic7=0x7f020047;
+        public static final int pic8=0x7f020048;
+        public static final int tile=0x7f020049;
     }
     public static final class id {
         public static final int action_bar=0x7f0b0040;

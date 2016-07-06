@@ -4,49 +4,32 @@
     api-level="23"
     density="xxxhdpi"
     format="7"
-    timestamp="13815183346949"
+    timestamp="14512789421125"
     token="-1008174478895831182" >
 
     <task
         name="javac"
-        duration="864" />
+        duration="2292" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="52" />
+        duration="325" />
     <task
         name="verifier"
-        duration="3" />
+        duration="28" />
 
     <artifact
         location="C:\Users\Mike\AndroidStudioProjects\SlidingTabsBasic\SlidingTabsBasic\Application\build\intermediates\transforms\dex\debug\folders\1000\5\slice_8\classes.dex"
         type="DEX" />
 
-    <build timestamp="1268021801752" >
-        <artifact
-            location="C:\Users\Mike\AndroidStudioProjects\SlidingTabsBasic\SlidingTabsBasic\Application\build\intermediates\transforms\dex\debug\folders\1000\5\slice_8\classes.dex"
-            type="DEX" />
-    </build>
-    <build timestamp="10701403290430" >
-        <artifact
-            location="C:\Users\Mike\AndroidStudioProjects\SlidingTabsBasic\SlidingTabsBasic\Application\build\intermediates\transforms\dex\debug\folders\1000\5\slice_2\classes.dex"
-            type="DEX" />
-    </build>
-    <build
-        timestamp="12579188633066"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="C:\Users\Mike\AndroidStudioProjects\SlidingTabsBasic\SlidingTabsBasic\Application\build\intermediates\reload-dex\debug\classes.dex"
-            type="RELOAD_DEX" />
-    </build>
-    <build timestamp="12608868781731" >
+    <build timestamp="14305245211364" >
         <artifact
             location="C:\Users\Mike\AndroidStudioProjects\SlidingTabsBasic\SlidingTabsBasic\Application\build\intermediates\res\resources-debug.ap_"
             type="RESOURCES" />
     </build>
-    <build timestamp="13815183346949" >
+    <build timestamp="14512789421125" >
         <artifact
             location="C:\Users\Mike\AndroidStudioProjects\SlidingTabsBasic\SlidingTabsBasic\Application\build\intermediates\transforms\dex\debug\folders\1000\5\slice_8\classes.dex"
             type="DEX" />

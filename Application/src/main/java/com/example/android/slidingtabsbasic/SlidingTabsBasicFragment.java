@@ -29,7 +29,7 @@ public class SlidingTabsBasicFragment extends Fragment {
 
     private ViewPager mViewPager;
 
-    Context c;
+    String title;
 
 
     @Override
@@ -61,24 +61,24 @@ public class SlidingTabsBasicFragment extends Fragment {
 
         @Override
         public CharSequence getPageTitle(int position) {
-            String item;
+
             switch(position){
-                case 0: item = "Featured";
+                case 0: title = "Featured";
                     break;
-                case 1: item = "Fun";
+                case 1: title = "Fun";
                     break;
-                case 2: item = "Food";
+                case 2: title = "Food";
                     break;
-                case 3: item = "Retail";
+                case 3: title = "Retail";
                     break;
-                case 4: item = "Travel";
+                case 4: title = "Travel";
                     break;
-                case 5: item = "Wellness";
+                case 5: title = "Wellness";
                     break;
-                default:item = "Featured";
+                default:title = "Featured";
                     break;
             }
-            return item;
+            return title;
         }
         ListView list;
         String[] itemname ={
@@ -109,7 +109,6 @@ public class SlidingTabsBasicFragment extends Fragment {
             container.addView(view);
 
             // Retrieve a TextView from the inflated View, and update it's text
-            //TODO insert expandable list here
             ExpandableListView elv=(ExpandableListView) getActivity().findViewById(R.id.expandableListView1);
             final ArrayList<Coupons> Coupons=getData();
 
@@ -129,24 +128,6 @@ public class SlidingTabsBasicFragment extends Fragment {
                     return false;
                 }
             });
-
-            //working list here, have to chase it?
-            /*
-            CustomListAdapter adapter=new CustomListAdapter(getActivity(), itemname, imgid);
-            list=(ListView)getActivity().findViewById(R.id.list);
-            list.setAdapter(adapter);
-
-            list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-
-                @Override
-                public void onItemClick(AdapterView<?> parent, View view,
-                                        int position, long id) {
-                    // TODO Auto-generated method stub
-                    //TODO change to item page.
-                }
-            });
-            */
-           // view.setTag(list);
 
             TextView title = (TextView) view.findViewById(R.id.item_title);
             title.setText(String.valueOf(position + 1));

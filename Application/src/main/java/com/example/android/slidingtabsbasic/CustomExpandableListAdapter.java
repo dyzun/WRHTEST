@@ -152,16 +152,16 @@ public class CustomExpandableListAdapter extends BaseExpandableListAdapter {
 
             //ASSIGN coupons IMAGES ACCORDING TO coupons NAME
 
-            /*if(name=="Man Utd")
+            if(name=="Coupon 1")
             {
-                img.setImageResource(R.drawable.manutd);
-            }else if(name=="Chelsea")
+                img.setImageResource(R.drawable.cop1);
+            }else if(name=="Coupon 2")
             {
-                img.setImageResource(R.drawable.chelsea);
-            }else if(name=="Arsenal")
+                img.setImageResource(R.drawable.cop2);
+            }else if(name=="Coupon 3")
             {
-                img.setImageResource(R.drawable.arsenal);
-            }*/
+                img.setImageResource(R.drawable.cop3);
+            }
 
             //SET coupons ROW BACKGROUND COLOR
             convertView.setBackgroundColor(Color.LTGRAY);
