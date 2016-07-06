@@ -109,7 +109,7 @@ public class SlidingTabsBasicFragment extends Fragment {
             container.addView(view);
 
             // Retrieve a TextView from the inflated View, and update it's text
-            ExpandableListView elv=(ExpandableListView) getActivity().findViewById(R.id.expandableListView1);
+            ExpandableListView elv=(ExpandableListView) view.findViewById(R.id.expandableListView1);
             final ArrayList<Coupons> Coupons=getData();
 
             //CREATE AND BIND TO ADAPTER
