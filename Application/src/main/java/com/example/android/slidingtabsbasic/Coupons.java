@@ -1,5 +1,7 @@
 package com.example.android.slidingtabsbasic;
 
+import java.util.ArrayList;
+
 /**
  * Created by Mike on 7/5/2016.
  */
@@ -8,7 +10,7 @@ public class Coupons {
     boolean saved =false;
     boolean featured =false;
     String name;
-    String descrip;
+    public ArrayList<String> deals=new ArrayList<String>();
     int pin;
     String voc = "WRH"+Integer.toString(pin);
 
@@ -46,14 +48,6 @@ public class Coupons {
 
     public String getVoc() {
         return voc;
-    }
-
-    public String getDescrip() {
-        return descrip;
-    }
-
-    public void setDescrip(String descrip) {
-        this.descrip = descrip;
     }
 
     public String getName() {

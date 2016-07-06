@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
         addDrawerItems();
         setupDrawer();
         ActionBar actionBar =getSupportActionBar();
+        assert actionBar != null;
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setHomeButtonEnabled(false);
 
@@ -55,14 +56,14 @@ public class MainActivity extends AppCompatActivity {
 
     }
     private void addDrawerItems() {
-        String[] osArray = { "Android", "iOS", "Windows", "OS X", "Linux" };
-        mAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, osArray);
+        String[] catArray = { "My Henry's","Invite Neighbors","Contact WRH","About Us" };
+        mAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, catArray);
         mDrawerList.setAdapter(mAdapter);
 
         mDrawerList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(MainActivity.this, "Time for an upgrade!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Needs to be Implemented", Toast.LENGTH_SHORT).show();
             }
         });
     }
