@@ -3,6 +3,7 @@ package com.example.android.slidingtabsbasic;
 import com.example.android.slidingtabsbasic.CustomListAdapter;
 import com.example.android.common.view.SlidingTabLayout;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.PagerAdapter;
@@ -12,10 +13,13 @@ import android.app.Activity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.ExpandableListView;
 import android.widget.ListView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.ArrayList;
 
 public class SlidingTabsBasicFragment extends Fragment {
 
@@ -24,6 +28,8 @@ public class SlidingTabsBasicFragment extends Fragment {
     private SlidingTabLayout mSlidingTabLayout;
 
     private ViewPager mViewPager;
+
+    Context c;
 
 
     @Override
@@ -105,8 +111,29 @@ public class SlidingTabsBasicFragment extends Fragment {
 
             // Retrieve a TextView from the inflated View, and update it's text
             //TODO insert expandable list here
+            ExpandableListView elv=(ExpandableListView) getActivity().findViewById(R.id.expandableListView1);
+
+            final ArrayList<Coupons> Coupons=getData();
+
+            //CREATE AND BIND TO ADAPTER
+            CustomExpandableListAdapter adapter=new CustomExpandableListAdapter(getActivity(), Coupons);
+            elv.setAdapter(adapter);
+
+            //SET ONCLICK LISTENER
+            elv.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
+
+                @Override
+                public boolean onChildClick(ExpandableListView parent, View v, int groupPos,
+                                            int childPos, long id) {
+
+                    Toast.makeText(getContext(), Coupons.get(groupPos).deals.get(childPos), Toast.LENGTH_SHORT).show();
+
+                    return false;
+                }
+            });
 
             //working list here, have to chase it?
+            /*
             CustomListAdapter adapter=new CustomListAdapter(getActivity(), itemname, imgid);
             list=(ListView)getActivity().findViewById(R.id.list);
             list.setAdapter(adapter);
@@ -120,6 +147,7 @@ public class SlidingTabsBasicFragment extends Fragment {
                     //TODO change to item page.
                 }
             });
+            */
            // view.setTag(list);
 
             TextView title = (TextView) view.findViewById(R.id.item_title);
@@ -132,6 +160,33 @@ public class SlidingTabsBasicFragment extends Fragment {
         public void destroyItem(ViewGroup container, int position, Object object) {
             container.removeView((View) object);
         }
+        private ArrayList<Coupons> getData()
+        {
 
+            Coupons t1=new Coupons("Man Utd");
+            t1.deals.add("Wayne Rooney");
+            t1.deals.add("Van Persie");
+            t1.deals.add("Ander Herera");
+            t1.deals.add("Juan Mata");
+
+            Coupons t2=new Coupons("Arsenal");
+            t2.deals.add("Aaron Ramsey");
+            t2.deals.add("Mesut Ozil");
+            t2.deals.add("Jack Wilshere");
+            t2.deals.add("Alexis Sanchez");
+
+            Coupons t3=new Coupons("Chelsea");
+            t3.deals.add("John Terry");
+            t3.deals.add("Eden Hazard");
+            t3.deals.add("Diego Costa");
+            t3.deals.add("Oscar");
+
+            ArrayList<Coupons> allCoupons=new ArrayList<Coupons>();
+            allCoupons.add(t1);
+            allCoupons.add(t2);
+            allCoupons.add(t3);
+
+            return allCoupons;
+        }
     }
 }

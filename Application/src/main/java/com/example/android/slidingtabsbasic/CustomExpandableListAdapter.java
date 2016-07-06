@@ -1,8 +1,5 @@
 package com.example.android.slidingtabsbasic;
 
-/**
- * Created by Mike on 7/6/2016.
- */
 import java.util.ArrayList;
 import android.content.Context;
 import android.graphics.Color;
@@ -61,7 +58,7 @@ public class CustomExpandableListAdapter extends BaseExpandableListAdapter {
             String couponsName= getGroup(groupPos).toString();
 
             //ASSIGN IMAGES TO deals ACCORDING TO THEIR NAMES AN couponsS
-            if(couponsName=="Man Utd")
+            /*if(couponsName=="Man Utd")
             {
                 if(child=="Wayne Rooney")
                 {
@@ -106,7 +103,7 @@ public class CustomExpandableListAdapter extends BaseExpandableListAdapter {
                 {
                     img.setImageResource(R.drawable.ozil)  ;
                 }
-            }
+            }*/
 
             return convertView;
         }
@@ -155,7 +152,7 @@ public class CustomExpandableListAdapter extends BaseExpandableListAdapter {
 
             //ASSIGN coupons IMAGES ACCORDING TO coupons NAME
 
-            if(name=="Man Utd")
+            /*if(name=="Man Utd")
             {
                 img.setImageResource(R.drawable.manutd);
             }else if(name=="Chelsea")
@@ -164,7 +161,7 @@ public class CustomExpandableListAdapter extends BaseExpandableListAdapter {
             }else if(name=="Arsenal")
             {
                 img.setImageResource(R.drawable.arsenal);
-            }
+            }*/
 
             //SET coupons ROW BACKGROUND COLOR
             convertView.setBackgroundColor(Color.LTGRAY);

@@ -14,6 +14,10 @@ public class Coupons {
     int pin;
     String voc = "WRH"+Integer.toString(pin);
 
+    public Coupons(String name){
+        this.name = name;
+    }
+
     public String getCategory() {
         return category;
     }
