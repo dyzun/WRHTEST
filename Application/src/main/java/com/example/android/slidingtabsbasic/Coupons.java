@@ -1,6 +1,7 @@
 package com.example.android.slidingtabsbasic;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 /**
  * Created by Mike on 7/5/2016.
@@ -13,6 +14,7 @@ public class Coupons {
     public ArrayList<String> deals=new ArrayList<String>();
     int pin;
     String voc = "WRH"+Integer.toString(pin);
+    Date expire;
 
     public Coupons(String name){
         this.name = name;
@@ -62,4 +64,9 @@ public class Coupons {
         this.name = name;
     }
 
+    public Date getExpire() { return expire; }
+
+    public void setExpire(Date expire){
+        this.expire = expire;
+    }
 }
