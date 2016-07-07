@@ -1,6 +1,9 @@
 package com.example.android.slidingtabsbasic;
 
+import java.text.DateFormat;
 import java.util.ArrayList;
+import java.util.Date;
+
 import android.content.Context;
 import android.graphics.Color;
 import android.view.LayoutInflater;
@@ -47,12 +50,16 @@ public class CustomExpandableListAdapter extends BaseExpandableListAdapter {
 
             //GET CHILD/PLAYER NAME
             String  child=(String) getChild(groupPos, childPos);
+            //Date date=(Date) getChild(groupPos, childPos);
+            //String currentDateTimeString = DateFormat.getDateTimeInstance().format(new Date());
+
 
             //SET CHILD NAME
             TextView nameTv=(TextView) convertView.findViewById(R.id.textView1);
             //ImageView img=(ImageView) convertView.findViewById(R.id.imageView1);
-
+            //TextView dateTv=(TextView) convertView.findViewById(R.id.textView2);
             nameTv.setText(child);
+            //dateTv.setText(currentDateTimeString);
 
             //GET coupons NAME
             String couponsName= getGroup(groupPos).toString();

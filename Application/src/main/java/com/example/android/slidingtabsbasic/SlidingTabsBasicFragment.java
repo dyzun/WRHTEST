@@ -20,6 +20,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 
 public class SlidingTabsBasicFragment extends Fragment {
 
@@ -144,13 +146,37 @@ public class SlidingTabsBasicFragment extends Fragment {
 
             Coupons t1=new Coupons("Coupon 1");
             t1.deals.add("Description of coupon 1\n");
+            t1.setCategory("Food");
+            t1.setFeatured(true);
+            Calendar cal = Calendar.getInstance();
+            cal.set(Calendar.YEAR, 2017);
+            cal.set(Calendar.MONTH, Calendar.JANUARY);
+            cal.set(Calendar.DAY_OF_MONTH, 1);
+            Date date = cal.getTime();
+            t1.setExpire(date);
 
             Coupons t2=new Coupons("Coupon 2");
             t2.deals.add("Description of coupon 2\n");
+            t2.setCategory("Retail");
+            t2.setFeatured(false);
+            Calendar cal2 = Calendar.getInstance();
+            cal2.set(Calendar.YEAR, 2017);
+            cal2.set(Calendar.MONTH, Calendar.JANUARY);
+            cal2.set(Calendar.DAY_OF_MONTH, 1);
+            Date date2 = cal2.getTime();
+            t1.setExpire(date2);
 
 
             Coupons t3=new Coupons("Coupon 3");
             t3.deals.add("Description of coupon 3\n");
+            t3.setCategory("Fun");
+            t3.setFeatured(true);
+            Calendar cal3 = Calendar.getInstance();
+            cal3.set(Calendar.YEAR, 2017);
+            cal3.set(Calendar.MONTH, Calendar.JANUARY);
+            cal3.set(Calendar.DAY_OF_MONTH, 1);
+            Date date3 = cal3.getTime();
+            t1.setExpire(date3);
 
 
             ArrayList<Coupons> allCoupons=new ArrayList<Coupons>();
