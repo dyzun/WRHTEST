@@ -6,24 +6,6 @@
       android:orientation="vertical"
       android:gravity="center">
 
-    <TextView
-          android:id="@+id/item_subtitle"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:textAppearance="?android:attr/textAppearanceLarge"
-          android:text="Page:"/>
-
-    <TextView
-          android:id="@+id/item_title"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:textSize="80sp" />
-    <!--TODO change from text view to expandable list for products-->
-    <ListView
-        android:id="@+id/list"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
-    </ListView>
     <ExpandableListView
         android:id="@+id/expandableListView1"
         android:layout_width="match_parent"

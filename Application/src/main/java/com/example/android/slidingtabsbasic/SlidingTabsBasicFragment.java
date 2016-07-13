@@ -82,28 +82,7 @@ public class SlidingTabsBasicFragment extends Fragment {
             }
             return title;
         }
-        ListView list;
-        String[] itemname ={
-                "Safari",
-                "Camera",
-                "Global",
-                "FireFox",
-                "UC Browser",
-                "Android Folder",
-                "VLC Player",
-                "Cold War"
-        };
 
-        Integer[] imgid={
-                R.drawable.pic1,
-                R.drawable.pic2,
-                R.drawable.pic3,
-                R.drawable.pic4,
-                R.drawable.pic5,
-                R.drawable.pic6,
-                R.drawable.pic7,
-                R.drawable.pic8,
-        };
         @Override
         public Object instantiateItem(ViewGroup container, int position) {
             View view = getActivity().getLayoutInflater().inflate(R.layout.pager_item, container, false);
@@ -130,9 +109,6 @@ public class SlidingTabsBasicFragment extends Fragment {
                     return false;
                 }
             });
-
-            TextView title = (TextView) view.findViewById(R.id.item_title);
-            title.setText(String.valueOf(position + 1));
 
             return view;
         }
@@ -164,7 +140,7 @@ public class SlidingTabsBasicFragment extends Fragment {
             cal2.set(Calendar.MONTH, Calendar.JANUARY);
             cal2.set(Calendar.DAY_OF_MONTH, 1);
             Date date2 = cal2.getTime();
-            t1.setExpire(date2);
+            t2.setExpire(date2);
 
 
             Coupons t3=new Coupons("Coupon 3");
@@ -176,7 +152,7 @@ public class SlidingTabsBasicFragment extends Fragment {
             cal3.set(Calendar.MONTH, Calendar.JANUARY);
             cal3.set(Calendar.DAY_OF_MONTH, 1);
             Date date3 = cal3.getTime();
-            t1.setExpire(date3);
+            t3.setExpire(date3);
 
 
             ArrayList<Coupons> allCoupons=new ArrayList<Coupons>();

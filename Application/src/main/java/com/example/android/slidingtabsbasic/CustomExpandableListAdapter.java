@@ -1,6 +1,7 @@
 package com.example.android.slidingtabsbasic;
 
 import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -50,67 +51,14 @@ public class CustomExpandableListAdapter extends BaseExpandableListAdapter {
 
             //GET CHILD/PLAYER NAME
             String  child=(String) getChild(groupPos, childPos);
-            //Date date=(Date) getChild(groupPos, childPos);
-            //String currentDateTimeString = DateFormat.getDateTimeInstance().format(new Date());
-
 
             //SET CHILD NAME
             TextView nameTv=(TextView) convertView.findViewById(R.id.textView1);
-            //ImageView img=(ImageView) convertView.findViewById(R.id.imageView1);
-            //TextView dateTv=(TextView) convertView.findViewById(R.id.textView2);
+
             nameTv.setText(child);
-            //dateTv.setText(currentDateTimeString);
 
             //GET coupons NAME
             String couponsName= getGroup(groupPos).toString();
-
-            //ASSIGN IMAGES TO deals ACCORDING TO THEIR NAMES AN couponsS
-            /*if(couponsName=="Man Utd")
-            {
-                if(child=="Wayne Rooney")
-                {
-                    img.setImageResource(R.drawable.rooney)  ;
-                }else if(child=="Ander Herera")
-                {
-                    img.setImageResource(R.drawable.herera)  ;
-                }else if(child=="Van Persie")
-                {
-                    img.setImageResource(R.drawable.vanpersie)  ;
-                }else if(child=="Juan Mata")
-                {
-                    img.setImageResource(R.drawable.mata)  ;
-                }
-            }else if(couponsName=="Chelsea")
-            {
-                if(child=="John Terry")
-                {
-                    img.setImageResource(R.drawable.terry)  ;
-                }else if(child=="Eden Hazard")
-                {
-                    img.setImageResource(R.drawable.hazard)  ;
-                }else if(child=="Oscar")
-                {
-                    img.setImageResource(R.drawable.oscar)  ;
-                }else if(child=="Diego Costa")
-                {
-                    img.setImageResource(R.drawable.costa)  ;
-                }
-            }else if(couponsName=="Arsenal")
-            {
-                if(child=="Jack Wilshere")
-                {
-                    img.setImageResource(R.drawable.wilshere)  ;
-                }else if(child=="Alexis Sanchez")
-                {
-                    img.setImageResource(R.drawable.sanchez)  ;
-                }else if(child=="Aaron Ramsey")
-                {
-                    img.setImageResource(R.drawable.ramsey)  ;
-                }else if(child=="Mesut Ozil")
-                {
-                    img.setImageResource(R.drawable.ozil)  ;
-                }
-            }*/
 
             return convertView;
         }
@@ -153,10 +101,13 @@ public class CustomExpandableListAdapter extends BaseExpandableListAdapter {
             //SET GROUP NAME
             TextView nameTv=(TextView) convertView.findViewById(R.id.textView1);
             ImageView img=(ImageView) convertView.findViewById(R.id.imageView1);
+            TextView dateTv=(TextView) convertView.findViewById(R.id.textView2);
+            Date date = t.getExpire();
+            String stringDate = DateFormat.getDateInstance().format(date);
 
             String name=t.name;
             nameTv.setText(name);
-
+            dateTv.setText("Expires: " +stringDate);
             //ASSIGN coupons IMAGES ACCORDING TO coupons NAME
 
             if(name=="Coupon 1")

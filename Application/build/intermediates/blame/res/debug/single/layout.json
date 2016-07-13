@@ -16,12 +16,12 @@
         "source": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.1.0\\res\\layout\\abc_dialog_title_material.xml"
     },
     {
-        "merged": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_layout.xml",
-        "source": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.1.0\\res\\layout\\abc_list_menu_item_layout.xml"
-    },
-    {
         "merged": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple_overlay_action_mode.xml",
         "source": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.1.0\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
+    },
+    {
+        "merged": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_layout.xml",
+        "source": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.1.0\\res\\layout\\abc_list_menu_item_layout.xml"
     },
     {
         "merged": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\build\\intermediates\\res\\merged\\debug\\layout\\coupon.xml",
