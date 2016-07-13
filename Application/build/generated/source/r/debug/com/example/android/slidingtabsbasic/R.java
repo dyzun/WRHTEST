@@ -1694,11 +1694,11 @@ containing a value of this type.
         public static final int item=0x7f0b0060;
         public static final int listMode=0x7f0b0009;
         public static final int list_item=0x7f0b002a;
-        public static final int log_fragment=0x7f0b0053;
+        public static final int log_fragment=0x7f0b0055;
         public static final int middle=0x7f0b0015;
         public static final int multiply=0x7f0b001e;
         public static final int my_toolbar=0x7f0b0051;
-        public static final int navList=0x7f0b0055;
+        public static final int navList=0x7f0b0053;
         public static final int navigation_drawer=0x7f0b0057;
         public static final int never=0x7f0b0019;
         public static final int none=0x7f0b000e;
@@ -1707,9 +1707,9 @@ containing a value of this type.
         public static final int progress_circular=0x7f0b0005;
         public static final int progress_horizontal=0x7f0b0006;
         public static final int radio=0x7f0b003a;
-        public static final int sample_content_fragment=0x7f0b0054;
+        public static final int sample_content_fragment=0x7f0b0052;
         public static final int sample_main_layout=0x7f0b0050;
-        public static final int sample_output=0x7f0b0052;
+        public static final int sample_output=0x7f0b0054;
         public static final int screen=0x7f0b001f;
         public static final int scrollView=0x7f0b0032;
         public static final int search_badge=0x7f0b0044;

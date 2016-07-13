@@ -493,11 +493,11 @@ int id imageView1 0x7f0b0058
 int id item 0x7f0b0060
 int id listMode 0x7f0b0009
 int id list_item 0x7f0b002a
-int id log_fragment 0x7f0b0053
+int id log_fragment 0x7f0b0055
 int id middle 0x7f0b0015
 int id multiply 0x7f0b001e
 int id my_toolbar 0x7f0b0051
-int id navList 0x7f0b0055
+int id navList 0x7f0b0053
 int id navigation_drawer 0x7f0b0057
 int id never 0x7f0b0019
 int id none 0x7f0b000e
@@ -506,9 +506,9 @@ int id parentPanel 0x7f0b002d
 int id progress_circular 0x7f0b0005
 int id progress_horizontal 0x7f0b0006
 int id radio 0x7f0b003a
-int id sample_content_fragment 0x7f0b0054
+int id sample_content_fragment 0x7f0b0052
 int id sample_main_layout 0x7f0b0050
-int id sample_output 0x7f0b0052
+int id sample_output 0x7f0b0054
 int id screen 0x7f0b001f
 int id scrollView 0x7f0b0032
 int id search_badge 0x7f0b0044

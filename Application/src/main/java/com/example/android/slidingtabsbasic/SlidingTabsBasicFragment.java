@@ -91,7 +91,7 @@ public class SlidingTabsBasicFragment extends Fragment {
 
             // Retrieve a TextView from the inflated View, and update it's text
             ExpandableListView elv=(ExpandableListView) view.findViewById(R.id.expandableListView1);
-            final ArrayList<Coupons> Coupons=getData();
+            final ArrayList<Coupons> Coupons=getData(position);//chooses list to display currently all items
 
             //CREATE AND BIND TO ADAPTER
             CustomExpandableListAdapter adapter=new CustomExpandableListAdapter(getActivity(), Coupons);
@@ -117,9 +117,8 @@ public class SlidingTabsBasicFragment extends Fragment {
         public void destroyItem(ViewGroup container, int position, Object object) {
             container.removeView((View) object);
         }
-        private ArrayList<Coupons> getData()
+        private ArrayList<Coupons> getData(int position)
         {
-
             Coupons t1=new Coupons("Coupon 1");
             t1.deals.add("Description of coupon 1\n");
             t1.setCategory("Food");
@@ -142,7 +141,6 @@ public class SlidingTabsBasicFragment extends Fragment {
             Date date2 = cal2.getTime();
             t2.setExpire(date2);
 
-
             Coupons t3=new Coupons("Coupon 3");
             t3.deals.add("Description of coupon 3\n");
             t3.setCategory("Fun");
@@ -154,12 +152,54 @@ public class SlidingTabsBasicFragment extends Fragment {
             Date date3 = cal3.getTime();
             t3.setExpire(date3);
 
-
             ArrayList<Coupons> allCoupons=new ArrayList<Coupons>();
             allCoupons.add(t1);
             allCoupons.add(t2);
             allCoupons.add(t3);
-
+            switch(position){
+                case 0:
+                    for(int i =allCoupons.size()-1; i>=0; i--){
+                        if(!allCoupons.get(i).isFeatured())
+                            allCoupons.remove(i);
+                    }
+                    break;
+                case 1:
+                    for(int i =allCoupons.size()-1; i>=0; i--){
+                        if(!allCoupons.get(i).getCategory().equals("Fun"));//Not working properly
+                            allCoupons.remove(i);
+                    }
+                    break;
+                case 2:
+                    for(int i =allCoupons.size()-1; i>=0; i--){
+                        if(!allCoupons.get(i).getCategory().equals("Food"))
+                            allCoupons.remove(i);
+                    }
+                    break;
+                case 3:
+                    for(int i =allCoupons.size()-1; i>=0; i--){
+                        if(!allCoupons.get(i).getCategory().equals("Retail"))
+                            allCoupons.remove(i);
+                    }
+                    break;
+                case 4:
+                    for(int i =allCoupons.size()-1; i>=0; i--){
+                    if(!allCoupons.get(i).getCategory().equals("Travel"))
+                        allCoupons.remove(i);
+                    }
+                    break;
+                case 5:
+                    for(int i =allCoupons.size()-1; i>=0; i--){
+                        if(!allCoupons.get(i).getCategory().equals("Wellness"))
+                        allCoupons.remove(i);
+                    }
+                    break;
+                default:
+                    for(int i =allCoupons.size()-1; i>=0; i--){
+                        if(!allCoupons.get(i).isFeatured())
+                            allCoupons.remove(i);
+                    }
+                    break;
+            }
             return allCoupons;
         }
     }

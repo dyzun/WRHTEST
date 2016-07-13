@@ -110,13 +110,13 @@ public class CustomExpandableListAdapter extends BaseExpandableListAdapter {
             dateTv.setText("Expires: " +stringDate);
             //ASSIGN coupons IMAGES ACCORDING TO coupons NAME
 
-            if(name=="Coupon 1")
+            if(name.equals("Coupon 1"))
             {
                 img.setImageResource(R.drawable.cop1);
-            }else if(name=="Coupon 2")
+            }else if(name.equals("Coupon 2"))
             {
                 img.setImageResource(R.drawable.cop2);
-            }else if(name=="Coupon 3")
+            }else if(name.equals("Coupon 3"))
             {
                 img.setImageResource(R.drawable.cop3);
             }
