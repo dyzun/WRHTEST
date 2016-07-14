@@ -7,250 +7,292 @@
                     "startLine": 2,
                     "startColumn": 4,
                     "startOffset": 55,
-                    "endLine": 5,
+                    "endLine": 4,
                     "endColumn": 12,
-                    "endOffset": 278
+                    "endOffset": 223
                 },
                 "from": {
-                    "file": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.1.0\\res\\values-v17\\values.xml",
+                    "file": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-v17\\values-v17.xml",
                     "position": {
-                        "startLine": 4,
+                        "startLine": 2,
                         "startColumn": 4,
-                        "startOffset": 295,
-                        "endLine": 7,
+                        "startOffset": 55,
+                        "endLine": 4,
                         "endColumn": 12,
-                        "endOffset": 518
+                        "endOffset": 223
                     }
                 }
             },
             {
                 "to": {
-                    "startLine": 6,
+                    "startLine": 5,
                     "startColumn": 4,
-                    "startOffset": 283,
-                    "endLine": 9,
+                    "startOffset": 228,
+                    "endLine": 8,
                     "endColumn": 12,
-                    "endOffset": 615
+                    "endOffset": 451
                 },
                 "from": {
-                    "file": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.1.0\\res\\values-v17\\values.xml",
+                    "file": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-v17\\values-v17.xml",
                     "position": {
-                        "startLine": 8,
+                        "startLine": 5,
                         "startColumn": 4,
-                        "startOffset": 523,
+                        "startOffset": 228,
+                        "endLine": 8,
+                        "endColumn": 12,
+                        "endOffset": 451
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 9,
+                    "startColumn": 4,
+                    "startOffset": 456,
+                    "endLine": 11,
+                    "endColumn": 12,
+                    "endOffset": 609
+                },
+                "from": {
+                    "file": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-v17\\values-v17.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 456,
                         "endLine": 11,
                         "endColumn": 12,
-                        "endOffset": 855
+                        "endOffset": 609
                     }
                 }
             },
             {
                 "to": {
-                    "startLine": 10,
+                    "startLine": 12,
                     "startColumn": 4,
-                    "startOffset": 620,
-                    "endLine": 12,
+                    "startOffset": 614,
+                    "endLine": 14,
                     "endColumn": 12,
-                    "endOffset": 765
+                    "endOffset": 759
                 },
                 "from": {
-                    "file": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.1.0\\res\\values-v17\\values.xml",
+                    "file": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-v17\\values-v17.xml",
                     "position": {
                         "startLine": 12,
                         "startColumn": 4,
-                        "startOffset": 860,
+                        "startOffset": 614,
                         "endLine": 14,
                         "endColumn": 12,
-                        "endOffset": 1005
+                        "endOffset": 759
                     }
                 }
             },
             {
                 "to": {
-                    "startLine": 13,
+                    "startLine": 15,
                     "startColumn": 4,
-                    "startOffset": 770,
-                    "endLine": 15,
+                    "startOffset": 764,
+                    "endLine": 17,
                     "endColumn": 12,
-                    "endOffset": 937
+                    "endOffset": 931
                 },
                 "from": {
-                    "file": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.1.0\\res\\values-v17\\values.xml",
+                    "file": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-v17\\values-v17.xml",
                     "position": {
                         "startLine": 15,
                         "startColumn": 4,
-                        "startOffset": 1010,
+                        "startOffset": 764,
                         "endLine": 17,
                         "endColumn": 12,
-                        "endOffset": 1177
+                        "endOffset": 931
                     }
                 }
             },
             {
                 "to": {
-                    "startLine": 16,
+                    "startLine": 18,
                     "startColumn": 4,
-                    "startOffset": 942,
-                    "endLine": 19,
+                    "startOffset": 936,
+                    "endLine": 21,
                     "endColumn": 12,
-                    "endOffset": 1165
+                    "endOffset": 1159
                 },
                 "from": {
-                    "file": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.1.0\\res\\values-v17\\values.xml",
+                    "file": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-v17\\values-v17.xml",
                     "position": {
                         "startLine": 18,
                         "startColumn": 4,
-                        "startOffset": 1182,
+                        "startOffset": 936,
                         "endLine": 21,
                         "endColumn": 12,
-                        "endOffset": 1405
+                        "endOffset": 1159
                     }
                 }
             },
             {
                 "to": {
-                    "startLine": 20,
+                    "startLine": 22,
                     "startColumn": 4,
-                    "startOffset": 1170,
-                    "endLine": 23,
+                    "startOffset": 1164,
+                    "endLine": 25,
                     "endColumn": 12,
-                    "endOffset": 1407
+                    "endOffset": 1401
                 },
                 "from": {
-                    "file": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.1.0\\res\\values-v17\\values.xml",
+                    "file": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-v17\\values-v17.xml",
                     "position": {
                         "startLine": 22,
                         "startColumn": 4,
-                        "startOffset": 1410,
+                        "startOffset": 1164,
                         "endLine": 25,
                         "endColumn": 12,
-                        "endOffset": 1647
+                        "endOffset": 1401
                     }
                 }
             },
             {
                 "to": {
-                    "startLine": 24,
+                    "startLine": 26,
                     "startColumn": 4,
-                    "startOffset": 1412,
-                    "endLine": 26,
+                    "startOffset": 1406,
+                    "endLine": 28,
                     "endColumn": 12,
-                    "endOffset": 1578
+                    "endOffset": 1572
                 },
                 "from": {
-                    "file": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.1.0\\res\\values-v17\\values.xml",
+                    "file": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-v17\\values-v17.xml",
                     "position": {
                         "startLine": 26,
                         "startColumn": 4,
-                        "startOffset": 1652,
+                        "startOffset": 1406,
                         "endLine": 28,
                         "endColumn": 12,
-                        "endOffset": 1818
+                        "endOffset": 1572
                     }
                 }
             },
             {
                 "to": {
-                    "startLine": 27,
+                    "startLine": 29,
                     "startColumn": 4,
-                    "startOffset": 1583,
-                    "endLine": 29,
+                    "startOffset": 1577,
+                    "endLine": 31,
                     "endColumn": 12,
-                    "endOffset": 1752
+                    "endOffset": 1746
                 },
                 "from": {
-                    "file": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.1.0\\res\\values-v17\\values.xml",
+                    "file": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-v17\\values-v17.xml",
                     "position": {
                         "startLine": 29,
                         "startColumn": 4,
-                        "startOffset": 1823,
+                        "startOffset": 1577,
                         "endLine": 31,
                         "endColumn": 12,
-                        "endOffset": 1992
+                        "endOffset": 1746
                     }
                 }
             },
             {
                 "to": {
-                    "startLine": 30,
+                    "startLine": 32,
                     "startColumn": 4,
-                    "startOffset": 1757,
-                    "endLine": 32,
+                    "startOffset": 1751,
+                    "endLine": 34,
                     "endColumn": 12,
-                    "endOffset": 1921
+                    "endOffset": 1915
                 },
                 "from": {
-                    "file": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.1.0\\res\\values-v17\\values.xml",
+                    "file": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-v17\\values-v17.xml",
                     "position": {
                         "startLine": 32,
                         "startColumn": 4,
-                        "startOffset": 1997,
+                        "startOffset": 1751,
                         "endLine": 34,
                         "endColumn": 12,
-                        "endOffset": 2161
+                        "endOffset": 1915
                     }
                 }
             },
             {
                 "to": {
-                    "startLine": 33,
+                    "startLine": 35,
                     "startColumn": 4,
-                    "startOffset": 1926,
-                    "endLine": 36,
+                    "startOffset": 1920,
+                    "endLine": 38,
                     "endColumn": 12,
-                    "endOffset": 2194
+                    "endOffset": 2188
                 },
                 "from": {
-                    "file": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.1.0\\res\\values-v17\\values.xml",
+                    "file": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-v17\\values-v17.xml",
                     "position": {
                         "startLine": 35,
                         "startColumn": 4,
-                        "startOffset": 2166,
+                        "startOffset": 1920,
                         "endLine": 38,
                         "endColumn": 12,
-                        "endOffset": 2434
+                        "endOffset": 2188
                     }
                 }
             },
             {
                 "to": {
-                    "startLine": 37,
+                    "startLine": 39,
                     "startColumn": 4,
-                    "startOffset": 2199,
-                    "endLine": 39,
+                    "startOffset": 2193,
+                    "endLine": 41,
                     "endColumn": 12,
-                    "endOffset": 2394
+                    "endOffset": 2388
                 },
                 "from": {
-                    "file": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.1.0\\res\\values-v17\\values.xml",
+                    "file": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-v17\\values-v17.xml",
                     "position": {
                         "startLine": 39,
                         "startColumn": 4,
-                        "startOffset": 2439,
+                        "startOffset": 2193,
                         "endLine": 41,
                         "endColumn": 12,
-                        "endOffset": 2634
+                        "endOffset": 2388
                     }
                 }
             },
             {
                 "to": {
-                    "startLine": 40,
+                    "startLine": 42,
                     "startColumn": 4,
-                    "startOffset": 2399,
-                    "endLine": 42,
+                    "startOffset": 2393,
+                    "endLine": 45,
                     "endColumn": 12,
-                    "endOffset": 2642
+                    "endOffset": 2592
                 },
                 "from": {
-                    "file": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.1.0\\res\\values-v17\\values.xml",
+                    "file": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-v17\\values-v17.xml",
                     "position": {
                         "startLine": 42,
                         "startColumn": 4,
-                        "startOffset": 2639,
-                        "endLine": 44,
+                        "startOffset": 2393,
+                        "endLine": 45,
                         "endColumn": 12,
-                        "endOffset": 2882
+                        "endOffset": 2592
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 46,
+                    "startColumn": 4,
+                    "startOffset": 2597,
+                    "endLine": 49,
+                    "endColumn": 12,
+                    "endOffset": 2921
+                },
+                "from": {
+                    "file": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-v17\\values-v17.xml",
+                    "position": {
+                        "startLine": 46,
+                        "startColumn": 4,
+                        "startOffset": 2597,
+                        "endLine": 49,
+                        "endColumn": 12,
+                        "endOffset": 2921
                     }
                 }
             }

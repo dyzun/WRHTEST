@@ -20,7 +20,7 @@
         android:layout_alignParentRight="true"
         android:text="Saved"
         android:id="@+id/checkBox"/>
-        <!--android:onClick="onCheckboxClicked"/>-->
+        <!--android:onClick="onCheckboxClicked"/>TODO implment to save-->
 
     <Button
         android:layout_width="wrap_content"

@@ -63,6 +63,9 @@ public class MainActivity extends AppCompatActivity {
         mDrawerList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                if(position ==2){
+                    //TODO implement invite activity
+                }
                 Toast.makeText(MainActivity.this, "Needs to be Implemented", Toast.LENGTH_SHORT).show();
             }
         });

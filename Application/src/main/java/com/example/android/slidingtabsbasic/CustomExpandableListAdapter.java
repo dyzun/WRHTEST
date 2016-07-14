@@ -95,7 +95,7 @@ public class CustomExpandableListAdapter extends BaseExpandableListAdapter {
             return convertView;
         }
         public void onCheckBoxClicked(View v){
-            //TODO try to fix NPE here not sure if possible 
+            //TODO try to fix NPE here not sure if possible
         }
         //GET NUMBER OF deals
         @Override
