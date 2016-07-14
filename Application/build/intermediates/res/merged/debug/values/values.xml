@@ -319,17 +319,12 @@
     <string name="abc_toolbar_collapse_description">Collapse</string>
     <string name="action_example">Example action</string>
     <string name="action_settings">Settings</string>
-    <string name="app_name">SlidingTabsBasic</string>
+    <string name="app_name">WeAreHenry</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
     <string name="bottom_sheet_behavior" translatable="false">android.support.design.widget.BottomSheetBehavior</string>
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
     <string name="intro_message">
         
-        
-            
-            A basic sample which shows how to use SlidingTabLayout to display a custom
-            ViewPager title strip which gives continuous feedback to the user when scrolling.
-            
         
         
     </string>

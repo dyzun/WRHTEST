@@ -16,14 +16,9 @@
 -->
 
 <resources>
-    <string name="app_name">SlidingTabsBasic</string>
+    <string name="app_name">WeAreHenry</string>
     <string name="intro_message">
         <![CDATA[
-        
-            
-            A basic sample which shows how to use SlidingTabLayout to display a custom
-            ViewPager title strip which gives continuous feedback to the user when scrolling.
-            
         
         ]]>
     </string>

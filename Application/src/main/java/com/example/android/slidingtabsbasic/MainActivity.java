@@ -64,13 +64,15 @@ public class MainActivity extends AppCompatActivity {
         mDrawerList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                if(position ==1){
-                    //TODO implement invite activity
-                    Intent intent = new Intent(MainActivity.this,InviteActivity.class);
-                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    startActivity(intent);
+                switch(position){
+                    case 1:
+                        Intent intent = new Intent(MainActivity.this,InviteActivity.class);
+                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        startActivity(intent);
+                        break;
+                    default:
+                        Toast.makeText(MainActivity.this, "Needs to be Implemented", Toast.LENGTH_SHORT).show();
                 }
-                Toast.makeText(MainActivity.this, "Needs to be Implemented", Toast.LENGTH_SHORT).show();
             }
         });
     }
