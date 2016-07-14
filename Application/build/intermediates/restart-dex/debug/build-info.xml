@@ -4,44 +4,27 @@
     api-level="23"
     density="xxxhdpi"
     format="7"
-    timestamp="58271950605521"
-    token="-1008174478895831182"
-    verifier="COMPATIBLE" >
+    timestamp="70764016944848"
+    token="-1008174478895831182" >
 
     <task
         name="javac"
-        duration="616" />
+        duration="16379" />
     <task
         name="instant-run-dex"
-        duration="820" />
+        duration="0" />
     <task
         name="instant-run-transform"
-        duration="87" />
+        duration="8941" />
     <task
         name="verifier"
-        duration="3" />
+        duration="995" />
 
     <artifact
-        location="C:\Users\Mike\AndroidStudioProjects\SlidingTabsBasic\SlidingTabsBasic\Application\build\intermediates\res\resources-debug.ap_"
-        type="RESOURCES" />
-    <artifact
-        location="C:\Users\Mike\AndroidStudioProjects\SlidingTabsBasic\SlidingTabsBasic\Application\build\intermediates\reload-dex\debug\classes.dex"
-        type="RELOAD_DEX" />
+        location="C:\Users\Mike\AndroidStudioProjects\SlidingTabsBasic\SlidingTabsBasic\Application\build\outputs\apk\Application-debug.apk"
+        type="MAIN" />
 
-    <build timestamp="55376678534246" >
-        <artifact
-            location="C:\Users\Mike\AndroidStudioProjects\SlidingTabsBasic\SlidingTabsBasic\Application\build\outputs\apk\Application-debug.apk"
-            type="MAIN" />
-    </build>
-    <build timestamp="58216332249416" >
-        <artifact
-            location="C:\Users\Mike\AndroidStudioProjects\SlidingTabsBasic\SlidingTabsBasic\Application\build\intermediates\res\resources-debug.ap_"
-            type="RESOURCES" />
-        <artifact
-            location="C:\Users\Mike\AndroidStudioProjects\SlidingTabsBasic\SlidingTabsBasic\Application\build\intermediates\transforms\dex\debug\folders\1000\5\slice_8\classes.dex"
-            type="DEX" />
-    </build>
-    <build timestamp="617482890939473" >
+    <build timestamp="70764016944848" >
         <artifact
             location="C:\Users\Mike\AndroidStudioProjects\SlidingTabsBasic\SlidingTabsBasic\Application\build\outputs\apk\Application-debug.apk"
             type="MAIN" />

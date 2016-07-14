@@ -40,8 +40,14 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.android.slidingtabsbasic.Navagation_Drawer"
-            android:label="@string/title_activity_navagation__drawer" />
+            android:name="com.example.android.slidingtabsbasic.InviteActivity"
+            android:label="@string/title_activity_invite"
+            android:parentActivityName="com.example.android.slidingtabsbasic.MainActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.android.slidingtabsbasic.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

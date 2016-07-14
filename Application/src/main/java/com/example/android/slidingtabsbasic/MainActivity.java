@@ -1,5 +1,6 @@
 package com.example.android.slidingtabsbasic;
 
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
@@ -63,8 +64,11 @@ public class MainActivity extends AppCompatActivity {
         mDrawerList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                if(position ==2){
+                if(position ==1){
                     //TODO implement invite activity
+                    Intent intent = new Intent(MainActivity.this,InviteActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    startActivity(intent);
                 }
                 Toast.makeText(MainActivity.this, "Needs to be Implemented", Toast.LENGTH_SHORT).show();
             }
