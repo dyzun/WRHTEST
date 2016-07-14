@@ -16,9 +16,11 @@
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:text="Saved"
-        android:id="@+id/checkBox" />
+        android:id="@+id/checkBox"/>
+        <!--android:onClick="onCheckboxClicked"/>TODO implment to save-->
 
     <Button
         android:layout_width="wrap_content"
@@ -26,6 +28,7 @@
         android:layout_marginTop="50dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         android:text="Redeem"
         android:id="@+id/button" />
 

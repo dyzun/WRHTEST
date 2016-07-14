@@ -1,31 +1,22 @@
 package com.example.android.slidingtabsbasic;
 
-import com.example.android.slidingtabsbasic.CustomListAdapter;
 import com.example.android.common.view.SlidingTabLayout;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
-import android.app.Activity;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
+import android.widget.CheckBox;
 import android.widget.ExpandableListView;
-import android.widget.ListView;
-import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
-
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 
 public class SlidingTabsBasicFragment extends Fragment {
-
-    static final String LOG_TAG = "SlidingTabsBasicFragment";
 
     private SlidingTabLayout mSlidingTabLayout;
 
@@ -91,7 +82,7 @@ public class SlidingTabsBasicFragment extends Fragment {
 
             // Retrieve a TextView from the inflated View, and update it's text
             ExpandableListView elv=(ExpandableListView) view.findViewById(R.id.expandableListView1);
-            final ArrayList<Coupons> Coupons=getData(position);//chooses list to display currently all items
+            final ArrayList<Coupons> Coupons=getData(position);
 
             //CREATE AND BIND TO ADAPTER
             CustomExpandableListAdapter adapter=new CustomExpandableListAdapter(getActivity(), Coupons);
@@ -117,18 +108,36 @@ public class SlidingTabsBasicFragment extends Fragment {
         public void destroyItem(ViewGroup container, int position, Object object) {
             container.removeView((View) object);
         }
+        /*TODO finish checkbox saving
+        public void onCheckboxClicked(View view) {
+            // Is the view now checked?
+            boolean checked = ((CheckBox) view).isChecked();
+            // Check which checkbox was clicked
+            switch(view.getId()) {
+                case R.id.checkBox:
+                    if (checked)
+                        setSaved(checked);
+                        // Put some meat on the sandwich
+                    else
+                        setSaved(!checked);
+                    // Remove the meat
+                    break;
+            }
+        }*/
         private ArrayList<Coupons> getData(int position)
         {
             Coupons t1=new Coupons("Coupon 1");
             t1.deals.add("Description of coupon 1\n");
             t1.setCategory("Food");
             t1.setFeatured(true);
+            t1.setSaved(true);
             Calendar cal = Calendar.getInstance();
             cal.set(Calendar.YEAR, 2017);
             cal.set(Calendar.MONTH, Calendar.JANUARY);
             cal.set(Calendar.DAY_OF_MONTH, 1);
             Date date = cal.getTime();
             t1.setExpire(date);
+
 
             Coupons t2=new Coupons("Coupon 2");
             t2.deals.add("Description of coupon 2\n");

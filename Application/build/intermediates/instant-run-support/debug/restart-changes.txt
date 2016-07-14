@@ -1,1 +1,1 @@
-CHANGED,C:\Users\Mike\AndroidStudioProjects\SlidingTabsBasic\SlidingTabsBasic\Application\build\intermediates\transforms\instantRun\debug\folders\1\5\main\com\example\android\slidingtabsbasic\SlidingTabsBasicFragment$SamplePagerAdapter.class
+CHANGED,C:\Users\Mike\AndroidStudioProjects\SlidingTabsBasic\SlidingTabsBasic\Application\build\intermediates\transforms\instantRun\debug\folders\1\5\main\com\example\android\slidingtabsbasic\CustomExpandableListAdapter.class

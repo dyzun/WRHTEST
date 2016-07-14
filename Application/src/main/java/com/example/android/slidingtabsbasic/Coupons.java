@@ -10,11 +10,13 @@ public class Coupons {
     String category;
     boolean saved =false;
     boolean featured =false;
+    boolean redeemed =false;
     String name;
     public ArrayList<String> deals=new ArrayList<String>();
     int pin;
     String voc = "WRH"+Integer.toString(pin);
     Date expire;
+
 
     public Coupons(String name){
         this.name = name;
@@ -69,4 +71,6 @@ public class Coupons {
     public void setExpire(Date expire){
         this.expire = expire;
     }
+    public boolean isRedeemed(){return redeemed;}
+    public void setRedeemed(boolean redeemed){ this.redeemed = redeemed;}
 }

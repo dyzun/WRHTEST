@@ -11,6 +11,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -39,28 +42,60 @@ public class CustomExpandableListAdapter extends BaseExpandableListAdapter {
             // TODO Auto-generated method stub
             return 0;
         }
+        class ChildHolder {
+            CheckBox checkBox1;
+            TextView name;
+            Button button;
+        }
+        public Object getRedeemed(int groupPos) {
+        // TODO Auto-generated method stub
+            return coupons.get(groupPos).redeemed;
+        }
+        public Object getSaved(int groupPos) {
+        //TODO Auto-generated method stub
+          return coupons.get(groupPos).saved;
+        }
         //GET PLAYER ROW
         @Override
         public View getChildView(int groupPos, int childPos, boolean isLastChild, View convertView,
                                  ViewGroup parent) {
             //ONLY INFLATER XML ROW LAYOUT IF ITS NOT PRESENT,OTHERWISE REUSE IT
-            if(convertView==null)
+            /*if(convertView==null)
             {
                 convertView=inflater.inflate(R.layout.deal, null);
+            }*/
+            final ChildHolder childHolder;
+            if( convertView == null ){
+                convertView = inflater.inflate(R.layout.deal, null);
+                childHolder = new ChildHolder();
+                //childHolder.checkBox1 = (CheckBox) convertView.findViewById(R.id.checkBox);
+                childHolder.name=(TextView)convertView.findViewById(R.id.textView1);
+                //childHolder.button = (Button) convertView.findViewById(R.id.button);
+
+                convertView.setTag(childHolder);
+            }else{
+                childHolder = (ChildHolder) convertView.getTag();
             }
-
-            //GET CHILD/PLAYER NAME
             String  child=(String) getChild(groupPos, childPos);
-
-            //SET CHILD NAME
-            TextView nameTv=(TextView) convertView.findViewById(R.id.textView1);
-
-            nameTv.setText(child);
-
-            //GET coupons NAME
-            String couponsName= getGroup(groupPos).toString();
+            childHolder.name.setText(child);
+            /*boolean saved=(boolean) getSaved(groupPos);
+            childHolder.checkBox1.setChecked(saved);
+            childHolder.checkBox1
+                    .setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                        @Override
+                        public void onCheckedChanged(CompoundButton button,
+                                                     boolean isChecked) {
+                            Coupons item = (Coupons) childHolder.checkBox1.getTag();
+                            item.setSaved(button.isChecked());// cause Null Pointer Exception
+                            TODO fix NPE
+                        }
+                    });*/
+            //childHolder.button.
 
             return convertView;
+        }
+        public void onCheckBoxClicked(View v){
+            //TODO try to fix NPE here not sure if possible 
         }
         //GET NUMBER OF deals
         @Override
