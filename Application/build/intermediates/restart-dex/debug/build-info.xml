@@ -4,38 +4,30 @@
     api-level="23"
     density="xxxhdpi"
     format="7"
-    timestamp="75295601401978"
-    token="-1008174478895831182"
-    verifier="COMPATIBLE" >
+    timestamp="145795029511382"
+    token="-1008174478895831182" >
 
     <task
         name="javac"
-        duration="3322" />
+        duration="9404" />
     <task
         name="instant-run-dex"
-        duration="13546" />
+        duration="0" />
     <task
         name="instant-run-transform"
-        duration="313" />
+        duration="355" />
     <task
         name="verifier"
-        duration="3" />
+        duration="134" />
 
     <artifact
-        location="C:\Users\Mike\AndroidStudioProjects\SlidingTabsBasic\SlidingTabsBasic\Application\build\intermediates\reload-dex\debug\classes.dex"
-        type="RELOAD_DEX" />
+        location="C:\Users\Mike\AndroidStudioProjects\SlidingTabsBasic\SlidingTabsBasic\Application\build\outputs\apk\Application-debug.apk"
+        type="MAIN" />
 
-    <build timestamp="75197725301051" >
+    <build timestamp="145795029511382" >
         <artifact
             location="C:\Users\Mike\AndroidStudioProjects\SlidingTabsBasic\SlidingTabsBasic\Application\build\outputs\apk\Application-debug.apk"
             type="MAIN" />
-    </build>
-    <build
-        timestamp="75295601401978"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="C:\Users\Mike\AndroidStudioProjects\SlidingTabsBasic\SlidingTabsBasic\Application\build\intermediates\reload-dex\debug\classes.dex"
-            type="RELOAD_DEX" />
     </build>
 
 </instant-run>

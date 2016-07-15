@@ -145,39 +145,40 @@ public class CustomExpandableListAdapter extends BaseExpandableListAdapter {
             dateTv.setText("Expires: " +stringDate);
             //ASSIGN coupons IMAGES ACCORDING TO coupons NAME
 
-            if(name.equals("Coupon 1"))
-            {
-                img.setImageResource(R.drawable.cop1);
-            }else if(name.equals("Coupon 2"))
-            {
-                img.setImageResource(R.drawable.cop2);
-            }else if(name.equals("Coupon 3"))
-            {
-                img.setImageResource(R.drawable.cop3);
-            }else if(name.equals("Coupon 4"))
-            {
-                img.setImageResource(R.drawable.cop4);
-            }else if(name.equals("Coupon 5"))
-            {
-                img.setImageResource(R.drawable.cop5);
-            }else if(name.equals("Coupon 6"))
-            {
-                img.setImageResource(R.drawable.cop6);
-            }else if(name.equals("Coupon 7"))
-            {
-                img.setImageResource(R.drawable.cop7);
-            }else if(name.equals("Coupon 8"))
-            {
-                img.setImageResource(R.drawable.cop8);
-            }else if(name.equals("Coupon 9"))
-            {
-                img.setImageResource(R.drawable.cop9);
-            }else if(name.equals("Coupon 10"))
-            {
-                img.setImageResource(R.drawable.cop10);
-            }else if(name.equals("Coupon 11"))
-            {
-                img.setImageResource(R.drawable.cop11);
+            switch (name) {
+                case "Coupon 1":
+                    img.setImageResource(R.drawable.cop1);
+                    break;
+                case "Coupon 2":
+                    img.setImageResource(R.drawable.cop2);
+                    break;
+                case "Coupon 3":
+                    img.setImageResource(R.drawable.cop3);
+                    break;
+                case "Coupon 4":
+                    img.setImageResource(R.drawable.cop4);
+                    break;
+                case "Coupon 5":
+                    img.setImageResource(R.drawable.cop5);
+                    break;
+                case "Coupon 6":
+                    img.setImageResource(R.drawable.cop6);
+                    break;
+                case "Coupon 7":
+                    img.setImageResource(R.drawable.cop7);
+                    break;
+                case "Coupon 8":
+                    img.setImageResource(R.drawable.cop8);
+                    break;
+                case "Coupon 9":
+                    img.setImageResource(R.drawable.cop9);
+                    break;
+                case "Coupon 10":
+                    img.setImageResource(R.drawable.cop10);
+                    break;
+                case "Coupon 11":
+                    img.setImageResource(R.drawable.cop11);
+                    break;
             }
 
             //SET coupons ROW BACKGROUND COLOR

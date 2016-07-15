@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:gravity="start"
         android:layout_below="@id/imageView1"
-        android:textSize="18sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         />
     <TextView
@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:gravity="end"
         android:layout_below="@id/imageView1"
-        android:textSize="18sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         />
 

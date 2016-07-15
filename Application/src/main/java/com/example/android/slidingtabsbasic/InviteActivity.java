@@ -19,7 +19,7 @@ public class InviteActivity extends AppCompatActivity {
         setContentView(R.layout.activity_invite);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        //getSupportActionBar().setTitle(Html.fromHtml("<font color='#000000'>InviteNeighbors </font>"));
+        getSupportActionBar().setTitle(Html.fromHtml("<font color='#000000'>InviteNeighbors </font>"));
 
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
