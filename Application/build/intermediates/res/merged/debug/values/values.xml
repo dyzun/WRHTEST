@@ -351,6 +351,7 @@
     <string name="sample_hide_log">Hide Log</string>
     <string name="sample_show_log">Show Log</string>
     <string name="status_bar_notification_info_overflow">999+</string>
+    <string name="title_activity_about">AboutActivity</string>
     <string name="title_activity_invite">InviteActivity</string>
     <string name="title_activity_navagation__drawer">Navagation_Drawer</string>
     <string name="title_activity_settings">Settings</string>
@@ -1455,8 +1456,7 @@
         <item name="android:dropDownItemStyle">@style/Widget.AppCompat.DropDownItem.Spinner</item>
     </style>
     <style name="Platform.Widget.AppCompat.Spinner" parent="android:Widget.Spinner"/>
-    <style name="PopupOverlay" parent="ThemeOverlay.AppCompat.Light">
-    </style>
+    <style name="PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
     <style name="RtlOverlay.DialogWindowTitle.AppCompat" parent="Base.DialogWindowTitle.AppCompat">
     </style>
     <style name="RtlOverlay.Widget.AppCompat.ActionBar.TitleItem" parent="android:Widget">

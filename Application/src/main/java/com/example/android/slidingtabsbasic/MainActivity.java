@@ -65,9 +65,14 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 switch(position){
                     case 1:
-                        Intent intent = new Intent(MainActivity.this,InviteActivity.class);
-                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                        startActivity(intent);
+                        Intent intentI = new Intent(MainActivity.this,InviteActivity.class);
+                        intentI.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        startActivity(intentI);
+                        break;
+                    case 3:
+                        Intent intentA = new Intent(MainActivity.this,AboutActivity.class);
+                        intentA.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        startActivity(intentA);
                         break;
                     default:
                         Toast.makeText(MainActivity.this, "Needs to be Implemented", Toast.LENGTH_SHORT).show();

@@ -40,6 +40,20 @@ public class InviteActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        FloatingActionButton fab2 = (FloatingActionButton) findViewById(R.id.fab2);
+        assert fab2 != null;
+        fab2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                EditText edt3 = (EditText)findViewById(R.id.editText3);
+                String phoneNumber = edt3.getText().toString();
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("sms:" + phoneNumber));
+                intent.putExtra("sms_body", "Hello there, I'd like to invite you to try the We Are Henry app!" +
+                        "\n\nlink to GooglePlayStore");
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+            }
+        });
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
