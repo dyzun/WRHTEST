@@ -71,4 +71,5 @@
 
     <string name="pref_title_vibrate">Vibrate</string>
     <string name="title_activity_invite">InviteActivity</string>
+    <string name="title_activity_about">AboutActivity</string>
 </resources>

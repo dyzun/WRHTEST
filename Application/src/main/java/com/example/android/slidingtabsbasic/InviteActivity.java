@@ -1,6 +1,7 @@
 package com.example.android.slidingtabsbasic;
 
 import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -19,8 +20,6 @@ public class InviteActivity extends AppCompatActivity {
         setContentView(R.layout.activity_invite);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle(Html.fromHtml("<font color='#000000'>InviteNeighbors </font>"));
-
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         assert fab != null;
@@ -36,8 +35,8 @@ public class InviteActivity extends AppCompatActivity {
                         "\n\nlink to GooglePlayStore");
                 EditText edt = (EditText)findViewById(R.id.editText2);
                 String xyz = edt.getText().toString();
-                intent.setData(Uri.parse("mailto:"+xyz)); // or just "mailto:" for blank
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK); // this will make such that when user returns to your app, your app is displayed, instead of the email app.
+                intent.setData(Uri.parse("mailto:"+xyz));
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
             }
         });

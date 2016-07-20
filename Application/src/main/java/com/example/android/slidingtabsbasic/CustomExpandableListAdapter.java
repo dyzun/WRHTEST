@@ -4,7 +4,6 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
-
 import android.content.Context;
 import android.graphics.Color;
 import android.view.LayoutInflater;
@@ -28,8 +27,6 @@ public class CustomExpandableListAdapter extends BaseExpandableListAdapter {
             this.coupons=coupons;
             inflater=(LayoutInflater) c.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         }
-
-
         //GET A SINGLE PLAYER
         @Override
         public Object getChild(int groupPos, int childPos) {
@@ -68,10 +65,9 @@ public class CustomExpandableListAdapter extends BaseExpandableListAdapter {
             if( convertView == null ){
                 convertView = inflater.inflate(R.layout.deal, null);
                 childHolder = new ChildHolder();
-                //childHolder.checkBox1 = (CheckBox) convertView.findViewById(R.id.checkBox);
+                //childHolder.checkBox1 = (CheckBox) convertView.findViewById(R.id.checkBox); TODO saving stuff
                 childHolder.name=(TextView)convertView.findViewById(R.id.textView1);
-                //childHolder.button = (Button) convertView.findViewById(R.id.button);
-
+                //childHolder.button = (Button) convertView.findViewById(R.id.button); TODO redeem button
                 convertView.setTag(childHolder);
             }else{
                 childHolder = (ChildHolder) convertView.getTag();
@@ -87,10 +83,11 @@ public class CustomExpandableListAdapter extends BaseExpandableListAdapter {
                                                      boolean isChecked) {
                             Coupons item = (Coupons) childHolder.checkBox1.getTag();
                             item.setSaved(button.isChecked());// cause Null Pointer Exception
-                            TODO fix NPE
+                            TODO fix NullPointerException
                         }
                     });*/
             //childHolder.button.
+            //TODO implement redeem button MAKE INTENT TO CARRY TO VOUCHER PAGE&MAKE VOUCHER PAGE
 
             return convertView;
         }
@@ -129,10 +126,8 @@ public class CustomExpandableListAdapter extends BaseExpandableListAdapter {
             {
                 convertView=inflater.inflate(R.layout.coupon, null);
             }
-
             //GET GROUP/coupons ITEM
             Coupons t=(Coupons) getGroup(groupPosition);
-
             //SET GROUP NAME
             TextView nameTv=(TextView) convertView.findViewById(R.id.textView1);
             ImageView img=(ImageView) convertView.findViewById(R.id.imageView1);
@@ -144,7 +139,6 @@ public class CustomExpandableListAdapter extends BaseExpandableListAdapter {
             nameTv.setText(name);
             dateTv.setText("Expires: " +stringDate);
             //ASSIGN coupons IMAGES ACCORDING TO coupons NAME
-
             switch (name) {
                 case "Coupon 1":
                     img.setImageResource(R.drawable.cop1);
@@ -182,8 +176,7 @@ public class CustomExpandableListAdapter extends BaseExpandableListAdapter {
             }
 
             //SET coupons ROW BACKGROUND COLOR
-            convertView.setBackgroundColor(Color.LTGRAY);
-
+            convertView.setBackgroundColor(Color.GRAY);
             return convertView;
         }
         @Override
@@ -196,6 +189,4 @@ public class CustomExpandableListAdapter extends BaseExpandableListAdapter {
             // TODO Auto-generated method stub
             return true;
         }
-
-
 }

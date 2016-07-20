@@ -1681,9 +1681,9 @@
                     "startLine": 242,
                     "startColumn": 4,
                     "startOffset": 17669,
-                    "endLine": 243,
+                    "endLine": 244,
                     "endColumn": 12,
-                    "endOffset": 17745
+                    "endOffset": 17800
                 },
                 "from": {
                     "file": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\src\\main\\res\\values-v21\\base-template-styles.xml",
@@ -1691,9 +1691,9 @@
                         "startLine": 20,
                         "startColumn": 4,
                         "startOffset": 677,
-                        "endLine": 21,
+                        "endLine": 22,
                         "endColumn": 12,
-                        "endOffset": 753
+                        "endOffset": 808
                     }
                 }
             }

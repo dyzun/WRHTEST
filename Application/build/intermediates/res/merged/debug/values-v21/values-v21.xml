@@ -241,5 +241,6 @@
     <style name="Platform.ThemeOverlay.AppCompat.Dark"/>
     <style name="Platform.ThemeOverlay.AppCompat.Light"/>
     <style name="Theme.Base" parent="android:Theme.Material.Light">
+        <item name="android:background">#13B911</item>
     </style>
 </resources>

@@ -19,11 +19,8 @@ import java.util.Date;
 public class SlidingTabsBasicFragment extends Fragment {
 
     private SlidingTabLayout mSlidingTabLayout;
-
     private ViewPager mViewPager;
-
     String title;
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -94,9 +91,7 @@ public class SlidingTabsBasicFragment extends Fragment {
                 @Override
                 public boolean onChildClick(ExpandableListView parent, View v, int groupPos,
                                             int childPos, long id) {
-
                     Toast.makeText(getContext(), Coupons.get(groupPos).deals.get(childPos), Toast.LENGTH_SHORT).show();
-
                     return false;
                 }
             });

@@ -14,8 +14,10 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:gravity="start"
+        android:paddingStart="20dp"
+        android:paddingLeft="20dp"
         android:layout_below="@id/imageView1"
-        android:textSize="20sp"
+        android:textSize="18sp"
         android:textStyle="bold"
         />
     <TextView
@@ -23,8 +25,10 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:gravity="end"
+        android:paddingEnd="20dp"
+        android:paddingRight="20dp"
         android:layout_below="@id/imageView1"
-        android:textSize="20sp"
+        android:textSize="18sp"
         android:textStyle="bold"
         />
 
