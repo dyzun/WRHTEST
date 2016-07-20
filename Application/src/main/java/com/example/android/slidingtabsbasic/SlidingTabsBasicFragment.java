@@ -21,6 +21,15 @@ public class SlidingTabsBasicFragment extends Fragment {
     private SlidingTabLayout mSlidingTabLayout;
     private ViewPager mViewPager;
     String title;
+    Boolean saved = false;
+
+    public void setSavedList(Boolean saved) {
+        this.saved = saved;
+    }
+
+    public Boolean getSavedList() {
+        return saved;
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -256,6 +265,13 @@ public class SlidingTabsBasicFragment extends Fragment {
             allCoupons.add(t9);
             allCoupons.add(t10);
             allCoupons.add(t11);
+
+            if(getSavedList()){
+                for(int i =allCoupons.size()-1; i>=0; i--){
+                    if(!allCoupons.get(i).isSaved())
+                        allCoupons.remove(i);
+                }
+            }
 
             switch(position){
                 case 0:

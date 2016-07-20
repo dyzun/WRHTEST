@@ -73,4 +73,6 @@
     <string name="title_activity_invite">InviteActivity</string>
     <string name="title_activity_about">AboutActivity</string>
     <string name="title_activity_contact">ContactActivity</string>
+    <string name="title_activity_saved">SavedActivity</string>
+
 </resources>

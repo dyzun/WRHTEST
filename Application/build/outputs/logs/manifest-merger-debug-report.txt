@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Mike\AndroidStudioProjects\SlidingTabsBasic\SlidingTabsBasic\Application\src\main\AndroidManifest.xml:16:1-57:12
+ADDED from C:\Users\Mike\AndroidStudioProjects\SlidingTabsBasic\SlidingTabsBasic\Application\src\main\AndroidManifest.xml:16:1-75:12
 	package
 		ADDED from C:\Users\Mike\AndroidStudioProjects\SlidingTabsBasic\SlidingTabsBasic\Application\src\main\AndroidManifest.xml:17:5-51
 	android:versionName
@@ -14,7 +14,7 @@ ADDED from C:\Users\Mike\AndroidStudioProjects\SlidingTabsBasic\SlidingTabsBasic
 	xmlns:android
 		ADDED from C:\Users\Mike\AndroidStudioProjects\SlidingTabsBasic\SlidingTabsBasic\Application\src\main\AndroidManifest.xml:16:11-69
 application
-ADDED from C:\Users\Mike\AndroidStudioProjects\SlidingTabsBasic\SlidingTabsBasic\Application\src\main\AndroidManifest.xml:22:5-55:19
+ADDED from C:\Users\Mike\AndroidStudioProjects\SlidingTabsBasic\SlidingTabsBasic\Application\src\main\AndroidManifest.xml:22:5-73:19
 MERGED from [com.android.support:support-v4:23.4.0] C:\Users\Mike\AndroidStudioProjects\SlidingTabsBasic\SlidingTabsBasic\Application\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v13:23.4.0] C:\Users\Mike\AndroidStudioProjects\SlidingTabsBasic\SlidingTabsBasic\Application\build\intermediates\exploded-aar\com.android.support\support-v13\23.4.0\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:23.4.0] C:\Users\Mike\AndroidStudioProjects\SlidingTabsBasic\SlidingTabsBasic\Application\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:22:5-20
@@ -88,6 +88,26 @@ ADDED from C:\Users\Mike\AndroidStudioProjects\SlidingTabsBasic\SlidingTabsBasic
 		ADDED from C:\Users\Mike\AndroidStudioProjects\SlidingTabsBasic\SlidingTabsBasic\Application\src\main\AndroidManifest.xml:50:13-69
 	android:name
 		ADDED from C:\Users\Mike\AndroidStudioProjects\SlidingTabsBasic\SlidingTabsBasic\Application\src\main\AndroidManifest.xml:47:13-42
+activity#com.example.android.slidingtabsbasic.ContactActivity
+ADDED from C:\Users\Mike\AndroidStudioProjects\SlidingTabsBasic\SlidingTabsBasic\Application\src\main\AndroidManifest.xml:55:9-63:20
+	android:label
+		ADDED from C:\Users\Mike\AndroidStudioProjects\SlidingTabsBasic\SlidingTabsBasic\Application\src\main\AndroidManifest.xml:57:13-59
+	android:parentActivityName
+		ADDED from C:\Users\Mike\AndroidStudioProjects\SlidingTabsBasic\SlidingTabsBasic\Application\src\main\AndroidManifest.xml:58:13-55
+	android:theme
+		ADDED from C:\Users\Mike\AndroidStudioProjects\SlidingTabsBasic\SlidingTabsBasic\Application\src\main\AndroidManifest.xml:59:13-69
+	android:name
+		ADDED from C:\Users\Mike\AndroidStudioProjects\SlidingTabsBasic\SlidingTabsBasic\Application\src\main\AndroidManifest.xml:56:13-44
+activity#com.example.android.slidingtabsbasic.SavedActivity
+ADDED from C:\Users\Mike\AndroidStudioProjects\SlidingTabsBasic\SlidingTabsBasic\Application\src\main\AndroidManifest.xml:64:9-72:20
+	android:label
+		ADDED from C:\Users\Mike\AndroidStudioProjects\SlidingTabsBasic\SlidingTabsBasic\Application\src\main\AndroidManifest.xml:66:13-57
+	android:parentActivityName
+		ADDED from C:\Users\Mike\AndroidStudioProjects\SlidingTabsBasic\SlidingTabsBasic\Application\src\main\AndroidManifest.xml:67:13-55
+	android:theme
+		ADDED from C:\Users\Mike\AndroidStudioProjects\SlidingTabsBasic\SlidingTabsBasic\Application\src\main\AndroidManifest.xml:68:13-69
+	android:name
+		ADDED from C:\Users\Mike\AndroidStudioProjects\SlidingTabsBasic\SlidingTabsBasic\Application\src\main\AndroidManifest.xml:65:13-42
 uses-sdk
 INJECTED from C:\Users\Mike\AndroidStudioProjects\SlidingTabsBasic\SlidingTabsBasic\Application\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:support-v4:23.4.0] C:\Users\Mike\AndroidStudioProjects\SlidingTabsBasic\SlidingTabsBasic\Application\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:20:5-43

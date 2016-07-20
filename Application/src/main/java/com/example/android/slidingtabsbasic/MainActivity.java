@@ -7,7 +7,6 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.support.v7.app.ActionBar;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -16,10 +15,6 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
-
-
-import com.example.android.common.activities.SampleActivityBase;
-
 
 public class MainActivity extends AppCompatActivity {
 
@@ -64,10 +59,20 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 switch(position){
+                    case 0:
+                        Intent intentS = new Intent(MainActivity.this, SavedActivity.class);
+                        intentS.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        startActivity(intentS);
+                        break;
                     case 1:
                         Intent intentI = new Intent(MainActivity.this,InviteActivity.class);
                         intentI.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                         startActivity(intentI);
+                        break;
+                    case 2:
+                        Intent intentC = new Intent(MainActivity.this,ContactActivity.class);
+                        intentC.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        startActivity(intentC);
                         break;
                     case 3:
                         Intent intentA = new Intent(MainActivity.this,AboutActivity.class);
