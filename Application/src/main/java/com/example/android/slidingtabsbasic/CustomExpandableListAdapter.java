@@ -15,6 +15,7 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class CustomExpandableListAdapter extends BaseExpandableListAdapter {
         private Context c;
@@ -52,9 +53,13 @@ public class CustomExpandableListAdapter extends BaseExpandableListAdapter {
         //TODO Auto-generated method stub
           return coupons.get(groupPos).saved;
         }
+
+        public void setSaved(int groupPos,boolean save){
+            coupons.get(groupPos).setSaved(save);
+        }
         //GET PLAYER ROW
         @Override
-        public View getChildView(int groupPos, int childPos, boolean isLastChild, View convertView,
+        public View getChildView(final int groupPos, int childPos, boolean isLastChild, View convertView,
                                  ViewGroup parent) {
             //ONLY INFLATER XML ROW LAYOUT IF ITS NOT PRESENT,OTHERWISE REUSE IT
             /*if(convertView==null)
@@ -65,7 +70,7 @@ public class CustomExpandableListAdapter extends BaseExpandableListAdapter {
             if( convertView == null ){
                 convertView = inflater.inflate(R.layout.deal, null);
                 childHolder = new ChildHolder();
-                //childHolder.checkBox1 = (CheckBox) convertView.findViewById(R.id.checkBox); TODO saving stuff
+                childHolder.checkBox1 = (CheckBox) convertView.findViewById(R.id.checkBox);// TODO saving stuff
                 childHolder.name=(TextView)convertView.findViewById(R.id.textView1);
                 //childHolder.button = (Button) convertView.findViewById(R.id.button); TODO redeem button
                 convertView.setTag(childHolder);
@@ -74,9 +79,22 @@ public class CustomExpandableListAdapter extends BaseExpandableListAdapter {
             }
             String  child=(String) getChild(groupPos, childPos);
             childHolder.name.setText(child);
-            /*boolean saved=(boolean) getSaved(groupPos);
+            boolean saved=(boolean) getSaved(groupPos);
             childHolder.checkBox1.setChecked(saved);
-            childHolder.checkBox1
+            childHolder.checkBox1.setOnClickListener(
+                    new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            if(((CheckBox)v).isChecked()) {
+                                childHolder.checkBox1.setChecked(true);
+                                setSaved(groupPos,true);
+                                Toast.makeText(c,
+                                        "this is saved",Toast.LENGTH_LONG).show();
+                            }
+                        }
+                    }
+            );
+            /*childHolder.checkBox1
                     .setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                         @Override
                         public void onCheckedChanged(CompoundButton button,
@@ -176,7 +194,7 @@ public class CustomExpandableListAdapter extends BaseExpandableListAdapter {
             }
 
             //SET coupons ROW BACKGROUND COLOR
-            convertView.setBackgroundColor(Color.GRAY);
+            convertView.setBackgroundColor(Color.LTGRAY);
             return convertView;
         }
         @Override
