@@ -1,9 +1,7 @@
 package com.example.android.slidingtabsbasic;
 
-import java.text.DateFormat;
-import java.util.ArrayList;
-import java.util.Date;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.preference.PreferenceManager;
@@ -13,10 +11,13 @@ import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
-import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.text.DateFormat;
+import java.util.ArrayList;
+import java.util.Date;
 
 public class CustomExpandableListAdapter extends BaseExpandableListAdapter {
         private Context c;
@@ -70,7 +71,7 @@ public class CustomExpandableListAdapter extends BaseExpandableListAdapter {
                 childHolder = new ChildHolder();
                 childHolder.checkBox1 = (CheckBox) convertView.findViewById(R.id.checkBox);
                 childHolder.name=(TextView)convertView.findViewById(R.id.textView1);
-                //childHolder.button = (Button) convertView.findViewById(R.id.button); //TODO redeem button
+                childHolder.button = (Button) convertView.findViewById(R.id.button); //TODO redeem button
                 convertView.setTag(childHolder);
             }else{
                 childHolder = (ChildHolder) convertView.getTag();
@@ -79,7 +80,7 @@ public class CustomExpandableListAdapter extends BaseExpandableListAdapter {
             childHolder.name.setText(child);
             boolean saved=(boolean) getSaved(groupPos);
             childHolder.checkBox1.setChecked(saved);
-
+            assert childHolder.button != null;
             childHolder.checkBox1.setOnClickListener(
                     new View.OnClickListener() {
                         @Override
@@ -101,7 +102,25 @@ public class CustomExpandableListAdapter extends BaseExpandableListAdapter {
                     }
             );
 
-            //childHolder.button.
+            childHolder.button.setOnClickListener(
+                    new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(c);
+                            Intent intent = new Intent(c, VoucherActivity.class);
+                            intent.putExtra("name", coupons.get(groupPos).getName());
+                            intent.putExtra("date", coupons.get(groupPos).getExpire());
+                            intent.putExtra("dets", childHolder.name.getText().toString());
+                            intent.putExtra("saved", preferences.getBoolean(coupons.get(groupPos).getName(), false));
+                            intent.putExtra("Voc",coupons.get(groupPos).getVoc() );
+                            //intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                            c.startActivity(intent);
+                        }
+                    }
+            );
+
+
+
             //TODO implement redeem button MAKE INTENT TO CARRY TO VOUCHER PAGE&MAKE VOUCHER PAGE
 
             return convertView;

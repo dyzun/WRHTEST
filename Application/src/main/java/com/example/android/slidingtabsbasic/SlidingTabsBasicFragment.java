@@ -1,7 +1,5 @@
 package com.example.android.slidingtabsbasic;
 
-import com.example.android.common.view.SlidingTabLayout;
-
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -13,9 +11,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ExpandableListView;
 import android.widget.Toast;
+
+import com.example.android.common.view.SlidingTabLayout;
+
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Random;
 
 public class SlidingTabsBasicFragment extends Fragment {
 
@@ -114,6 +116,15 @@ public class SlidingTabsBasicFragment extends Fragment {
             container.removeView((View) object);
         }
 
+        private String getPin(){
+            int pin;
+            Random r = new Random();
+            pin = r.nextInt(9999);
+            String str = String.format("%04d", pin);
+
+            return str;
+        }
+
         private ArrayList<Coupons> getData(int position)
         {
             SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
@@ -121,10 +132,12 @@ public class SlidingTabsBasicFragment extends Fragment {
             //still has issueing saving when app is closed
             //TODO GET COUPONS FROM DATABASE AND FIX SAVING OVER TO THAT
 
+
             Coupons t1=new Coupons("Coupon 1");
             t1.deals.add("Description of coupon 1\n");
             t1.setCategory("Food");
             t1.setFeatured(true);
+            t1.setVoc("0000");
             Calendar cal = Calendar.getInstance();
             cal.set(Calendar.YEAR, 2017);
             cal.set(Calendar.MONTH, Calendar.JANUARY);
@@ -138,11 +151,11 @@ public class SlidingTabsBasicFragment extends Fragment {
             Boolean saved = preferences.getBoolean(t1.getName(), false);//sets the save to whatever is in pref
             t1.setSaved(saved);
 
-
             Coupons t2=new Coupons("Coupon 2");
             t2.deals.add("Description of coupon 2\n");
             t2.setCategory("Retail");
             t2.setFeatured(false);
+            t2.setVoc("0380");
             Calendar cal2 = Calendar.getInstance();
             cal2.set(Calendar.YEAR, 2017);
             cal2.set(Calendar.MONTH, Calendar.JANUARY);
@@ -160,6 +173,7 @@ public class SlidingTabsBasicFragment extends Fragment {
             t3.deals.add("Description of coupon 3\n");
             t3.setCategory("Fun");
             t3.setFeatured(true);
+            t3.setVoc("1238");
             Calendar cal3 = Calendar.getInstance();
             cal3.set(Calendar.YEAR, 2017);
             cal3.set(Calendar.MONTH, Calendar.JANUARY);
@@ -177,6 +191,7 @@ public class SlidingTabsBasicFragment extends Fragment {
             t4.deals.add("Description of coupon 4\n");
             t4.setCategory("Travel");
             t4.setFeatured(false);
+            t4.setVoc("9237");
             Calendar cal4 = Calendar.getInstance();
             cal4.set(Calendar.YEAR, 2017);
             cal4.set(Calendar.MONTH, Calendar.JANUARY);
@@ -194,6 +209,7 @@ public class SlidingTabsBasicFragment extends Fragment {
             t5.deals.add("Description of coupon 5\n");
             t5.setCategory("Wellness");
             t5.setFeatured(true);
+            t5.setVoc("7831");
             Calendar cal5 = Calendar.getInstance();
             cal5.set(Calendar.YEAR, 2017);
             cal5.set(Calendar.MONTH, Calendar.JANUARY);
@@ -211,6 +227,7 @@ public class SlidingTabsBasicFragment extends Fragment {
             t6.deals.add("Description of coupon 6\n");
             t6.setCategory("Travel");
             t6.setFeatured(true);
+            t6.setVoc("6767");
             Calendar cal6 = Calendar.getInstance();
             cal6.set(Calendar.YEAR, 2017);
             cal6.set(Calendar.MONTH, Calendar.JANUARY);
@@ -228,6 +245,7 @@ public class SlidingTabsBasicFragment extends Fragment {
             t7.deals.add("Description of coupon 7\n");
             t7.setCategory("Wellness");
             t7.setFeatured(false);
+            t7.setVoc("8567");
             Calendar cal7 = Calendar.getInstance();
             cal7.set(Calendar.YEAR, 2017);
             cal7.set(Calendar.MONTH, Calendar.JANUARY);
@@ -245,6 +263,7 @@ public class SlidingTabsBasicFragment extends Fragment {
             t8.deals.add("Description of coupon 8\n");
             t8.setCategory("Food");
             t8.setFeatured(false);
+            t8.setVoc("2680");
             Calendar cal8 = Calendar.getInstance();
             cal8.set(Calendar.YEAR, 2017);
             cal8.set(Calendar.MONTH, Calendar.JANUARY);
@@ -262,6 +281,7 @@ public class SlidingTabsBasicFragment extends Fragment {
             t9.deals.add("Description of coupon 9\n");
             t9.setCategory("Retail");
             t9.setFeatured(true);
+            t9.setVoc("7777");
             Calendar cal9 = Calendar.getInstance();
             cal9.set(Calendar.YEAR, 2017);
             cal9.set(Calendar.MONTH, Calendar.JANUARY);
@@ -279,6 +299,7 @@ public class SlidingTabsBasicFragment extends Fragment {
             t10.deals.add("Description of coupon 10\n");
             t10.setCategory("Food");
             t10.setFeatured(false);
+            t10.setVoc("1010");
             Calendar cal10 = Calendar.getInstance();
             cal10.set(Calendar.YEAR, 2017);
             cal10.set(Calendar.MONTH, Calendar.JANUARY);
@@ -296,6 +317,7 @@ public class SlidingTabsBasicFragment extends Fragment {
             t11.deals.add("Description of coupon 11\n");
             t11.setCategory("Fun");
             t11.setFeatured(false);
+            t11.setVoc("7510");
             Calendar cal11 = Calendar.getInstance();
             cal11.set(Calendar.YEAR, 2017);
             cal11.set(Calendar.MONTH, Calendar.JANUARY);

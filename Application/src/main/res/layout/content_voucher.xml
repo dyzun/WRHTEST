@@ -54,7 +54,7 @@
         android:layout_marginTop="21dp"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
-    <CheckBox
+    <!--<CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
@@ -63,7 +63,16 @@
         android:paddingLeft="10dp"
         android:gravity="end"
         android:text="Saved"
-        android:id="@+id/checkBox"/>
+        android:id="@+id/checkBox"/>-->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Vocuher Code \n"
+        android:id="@+id/textView3"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
 
 
 </RelativeLayout>

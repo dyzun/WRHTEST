@@ -14,7 +14,7 @@ public class Coupons {
     String name;
     public ArrayList<String> deals=new ArrayList<String>();
     int pin;
-    String voc = "WRH"+Integer.toString(pin);
+    String voc;
     Date expire;
 
 
@@ -52,6 +52,9 @@ public class Coupons {
 
     public void setPin(int pin) {
         this.pin = pin;
+    }
+
+    public void setVoc(String pinStr){     this.voc = "WRH"+pinStr;
     }
 
     public String getVoc() {

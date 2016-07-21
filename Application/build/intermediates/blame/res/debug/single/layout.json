@@ -1,15 +1,15 @@
 [
     {
-        "merged": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_snackbar_include.xml",
-        "source": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_layout_snackbar_include.xml"
+        "merged": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\build\\intermediates\\res\\merged\\debug\\layout\\activity_about.xml",
+        "source": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\src\\main\\res\\layout\\activity_about.xml"
     },
     {
         "merged": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\build\\intermediates\\res\\merged\\debug\\layout\\content_about.xml",
         "source": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\src\\main\\res\\layout\\content_about.xml"
     },
     {
-        "merged": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\build\\intermediates\\res\\merged\\debug\\layout\\activity_about.xml",
-        "source": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\src\\main\\res\\layout\\activity_about.xml"
+        "merged": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_snackbar_include.xml",
+        "source": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_layout_snackbar_include.xml"
     },
     {
         "merged": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_time.xml",
@@ -248,12 +248,12 @@
         "source": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\layout\\design_layout_tab_text.xml"
     },
     {
-        "merged": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_view_list_nav_layout.xml",
-        "source": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_action_bar_view_list_nav_layout.xml"
-    },
-    {
         "merged": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\build\\intermediates\\res\\merged\\debug\\layout\\activity_voucher.xml",
         "source": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\src\\main\\res\\layout\\activity_voucher.xml"
+    },
+    {
+        "merged": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_view_list_nav_layout.xml",
+        "source": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\layout\\abc_action_bar_view_list_nav_layout.xml"
     },
     {
         "merged": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media.xml",
