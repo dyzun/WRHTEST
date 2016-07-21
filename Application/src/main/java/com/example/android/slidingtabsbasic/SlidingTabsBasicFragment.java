@@ -11,7 +11,6 @@ import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.CheckBox;
 import android.widget.ExpandableListView;
 import android.widget.Toast;
 import java.util.ArrayList;
@@ -91,10 +90,9 @@ public class SlidingTabsBasicFragment extends Fragment {
             // Retrieve a TextView from the inflated View, and update it's text
             ExpandableListView elv=(ExpandableListView) view.findViewById(R.id.expandableListView1);
             final ArrayList<Coupons> Coupons=getData(position);
-            //final ArrayList<Coupons> savedCoupons=saving(Coupons);
 
             //CREATE AND BIND TO ADAPTER
-            CustomExpandableListAdapter adapter = new CustomExpandableListAdapter(getActivity(), Coupons);//, savedCoupons, getSavedList());
+            CustomExpandableListAdapter adapter = new CustomExpandableListAdapter(getActivity(), Coupons);
             elv.setAdapter(adapter);
 
             //SET ONCLICK LISTENER
@@ -119,8 +117,9 @@ public class SlidingTabsBasicFragment extends Fragment {
         private ArrayList<Coupons> getData(int position)
         {
             SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
-            SharedPreferences.Editor editor = preferences.edit();
-
+            SharedPreferences.Editor editor = preferences.edit();// uses preference to hold saved coupons
+            //still has issueing saving when app is closed
+            //TODO GET COUPONS FROM DATABASE AND FIX SAVING OVER TO THAT
 
             Coupons t1=new Coupons("Coupon 1");
             t1.deals.add("Description of coupon 1\n");
@@ -133,11 +132,11 @@ public class SlidingTabsBasicFragment extends Fragment {
             cal.set(Calendar.DAY_OF_MONTH, 1);
             Date date = cal.getTime();
             t1.setExpire(date);
-            if(!preferences.getBoolean(t1.getName(), false)) {
+            if(!preferences.getBoolean(t1.getName(), false)) {//adds save value to shared pref if not already there
                 editor.putBoolean(t1.getName(), t1.isSaved());
                 editor.apply();
             }
-            Boolean saved = preferences.getBoolean(t1.getName(), false);
+            Boolean saved = preferences.getBoolean(t1.getName(), false);//sets the save to whatever is in pref
             t1.setSaved(saved);
 
 

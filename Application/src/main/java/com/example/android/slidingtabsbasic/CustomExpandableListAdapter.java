@@ -1,7 +1,6 @@
 package com.example.android.slidingtabsbasic;
 
 import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import android.content.Context;
@@ -23,15 +22,11 @@ public class CustomExpandableListAdapter extends BaseExpandableListAdapter {
         private Context c;
         private ArrayList<Coupons> coupons;
         private LayoutInflater inflater;
-        private boolean saved;
-        public ArrayList<Coupons> savedCoupons=new ArrayList<Coupons>();
 
-        public CustomExpandableListAdapter(Context c,ArrayList<Coupons> coupons)//,ArrayList<Coupons> savedCoupons, boolean saved)
+        public CustomExpandableListAdapter(Context c,ArrayList<Coupons> coupons)
         {
             this.c=c;
             this.coupons=coupons;
-            //this.savedCoupons=savedCoupons;
-            //this.saved = saved;
             inflater=(LayoutInflater) c.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         }
         //GET A SINGLE PLAYER
@@ -60,9 +55,6 @@ public class CustomExpandableListAdapter extends BaseExpandableListAdapter {
           return coupons.get(groupPos).saved;
         }
 
-        public void setSaved(int groupPos,boolean save){
-            coupons.get(groupPos).setSaved(save);
-        }
         //GET PLAYER ROW
         @Override
         public View getChildView(final int groupPos, int childPos, boolean isLastChild, View convertView,
@@ -96,17 +88,13 @@ public class CustomExpandableListAdapter extends BaseExpandableListAdapter {
                             SharedPreferences.Editor editor = preferences.edit();
                             if(((CheckBox)v).isChecked()) {
                                 childHolder.checkBox1.setChecked(true);
-                                //TODO create array list of saved coupons
-
-                                editor.putBoolean(coupons.get(groupPos).getName(), true);
+                                editor.putBoolean(coupons.get(groupPos).getName(), true);// edits prefences to hold data of saved coupon
                                 editor.apply();
-                                setSaved(groupPos,true);
-                                savedCoupons.add(coupons.get(groupPos));
                                 Toast.makeText(c,
-                                        "this is saved",Toast.LENGTH_LONG).show();
+                                        "this is saved",Toast.LENGTH_LONG).show();// TODO remove when debugging is over
                             }
                             else{
-                                editor.putBoolean(coupons.get(groupPos).getName(), false);
+                                editor.putBoolean(coupons.get(groupPos).getName(), false);// edits prefences to hold data of saved coupon
                                 editor.apply();
                             }
                         }
@@ -163,6 +151,7 @@ public class CustomExpandableListAdapter extends BaseExpandableListAdapter {
             nameTv.setText(name);
             dateTv.setText("Expires: " +stringDate);
             //ASSIGN coupons IMAGES ACCORDING TO coupons NAME
+            //TODO find way to connect to online database
             switch (name) {
                 case "Coupon 1":
                     img.setImageResource(R.drawable.cop1);
@@ -214,7 +203,4 @@ public class CustomExpandableListAdapter extends BaseExpandableListAdapter {
             return true;
         }
 
-    public ArrayList<Coupons> getSavedCoupons() {
-        return savedCoupons;
-    }
 }

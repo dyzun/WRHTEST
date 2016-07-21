@@ -16,7 +16,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:text="Name"
+        android:hint="Name"
         android:ems="10"
         android:id="@+id/editText4"
         android:layout_alignParentTop="true"
@@ -28,7 +28,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/editText5"
         android:layout_below="@+id/editText4"
-        android:text="Reason for Contacting Us?"
+        android:hint="Reason for Contacting Us?"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 </RelativeLayout>
