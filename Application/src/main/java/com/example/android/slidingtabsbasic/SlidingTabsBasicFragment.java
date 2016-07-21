@@ -125,7 +125,6 @@ public class SlidingTabsBasicFragment extends Fragment {
             t1.deals.add("Description of coupon 1\n");
             t1.setCategory("Food");
             t1.setFeatured(true);
-            t1.setSaved(true);
             Calendar cal = Calendar.getInstance();
             cal.set(Calendar.YEAR, 2017);
             cal.set(Calendar.MONTH, Calendar.JANUARY);
