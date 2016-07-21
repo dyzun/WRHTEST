@@ -2,7 +2,9 @@ package com.example.android.slidingtabsbasic;
 
 import com.example.android.common.view.SlidingTabLayout;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
@@ -89,9 +91,10 @@ public class SlidingTabsBasicFragment extends Fragment {
             // Retrieve a TextView from the inflated View, and update it's text
             ExpandableListView elv=(ExpandableListView) view.findViewById(R.id.expandableListView1);
             final ArrayList<Coupons> Coupons=getData(position);
+            //final ArrayList<Coupons> savedCoupons=saving(Coupons);
 
             //CREATE AND BIND TO ADAPTER
-            CustomExpandableListAdapter adapter=new CustomExpandableListAdapter(getActivity(), Coupons);
+            CustomExpandableListAdapter adapter = new CustomExpandableListAdapter(getActivity(), Coupons);//, savedCoupons, getSavedList());
             elv.setAdapter(adapter);
 
             //SET ONCLICK LISTENER
@@ -112,24 +115,13 @@ public class SlidingTabsBasicFragment extends Fragment {
         public void destroyItem(ViewGroup container, int position, Object object) {
             container.removeView((View) object);
         }
-        /*TODO finish checkbox saving
-        public void onCheckboxClicked(View view) {
-            // Is the view now checked?
-            boolean checked = ((CheckBox) view).isChecked();
-            // Check which checkbox was clicked
-            switch(view.getId()) {
-                case R.id.checkBox:
-                    if (checked)
-                        setSaved(checked);
-                        // Put some meat on the sandwich
-                    else
-                        setSaved(!checked);
-                    // Remove the meat
-                    break;
-            }
-        }*/
+
         private ArrayList<Coupons> getData(int position)
         {
+            SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
+            SharedPreferences.Editor editor = preferences.edit();
+
+
             Coupons t1=new Coupons("Coupon 1");
             t1.deals.add("Description of coupon 1\n");
             t1.setCategory("Food");
@@ -141,6 +133,12 @@ public class SlidingTabsBasicFragment extends Fragment {
             cal.set(Calendar.DAY_OF_MONTH, 1);
             Date date = cal.getTime();
             t1.setExpire(date);
+            if(!preferences.getBoolean(t1.getName(), false)) {
+                editor.putBoolean(t1.getName(), t1.isSaved());
+                editor.apply();
+            }
+            Boolean saved = preferences.getBoolean(t1.getName(), false);
+            t1.setSaved(saved);
 
 
             Coupons t2=new Coupons("Coupon 2");
@@ -153,6 +151,12 @@ public class SlidingTabsBasicFragment extends Fragment {
             cal2.set(Calendar.DAY_OF_MONTH, 1);
             Date date2 = cal2.getTime();
             t2.setExpire(date2);
+            if(!preferences.getBoolean(t2.getName(), false)) {
+                editor.putBoolean(t2.getName(), t2.isSaved());
+                editor.apply();
+            }
+            saved = preferences.getBoolean(t2.getName(), false);
+            t2.setSaved(saved);
 
             Coupons t3=new Coupons("Coupon 3");
             t3.deals.add("Description of coupon 3\n");
@@ -164,6 +168,12 @@ public class SlidingTabsBasicFragment extends Fragment {
             cal3.set(Calendar.DAY_OF_MONTH, 1);
             Date date3 = cal3.getTime();
             t3.setExpire(date3);
+            if(!preferences.getBoolean(t3.getName(), false)) {
+                editor.putBoolean(t3.getName(), t3.isSaved());
+                editor.apply();
+            }
+            saved = preferences.getBoolean(t3.getName(), false);
+            t3.setSaved(saved);
 
             Coupons t4=new Coupons("Coupon 4");
             t4.deals.add("Description of coupon 4\n");
@@ -175,6 +185,12 @@ public class SlidingTabsBasicFragment extends Fragment {
             cal4.set(Calendar.DAY_OF_MONTH, 1);
             Date date4 = cal4.getTime();
             t4.setExpire(date4);
+            if(!preferences.getBoolean(t4.getName(), false)) {
+                editor.putBoolean(t4.getName(), t4.isSaved());
+                editor.apply();
+            }
+            saved = preferences.getBoolean(t4.getName(), false);
+            t4.setSaved(saved);
 
             Coupons t5=new Coupons("Coupon 5");
             t5.deals.add("Description of coupon 5\n");
@@ -186,6 +202,12 @@ public class SlidingTabsBasicFragment extends Fragment {
             cal5.set(Calendar.DAY_OF_MONTH, 1);
             Date date5 = cal5.getTime();
             t5.setExpire(date5);
+            if(!preferences.getBoolean(t5.getName(), false)) {
+                editor.putBoolean(t5.getName(), t5.isSaved());
+                editor.apply();
+            }
+            saved = preferences.getBoolean(t5.getName(), false);
+            t5.setSaved(saved);
 
             Coupons t6=new Coupons("Coupon 6");
             t6.deals.add("Description of coupon 6\n");
@@ -197,6 +219,12 @@ public class SlidingTabsBasicFragment extends Fragment {
             cal6.set(Calendar.DAY_OF_MONTH, 1);
             Date date6 = cal6.getTime();
             t6.setExpire(date6);
+            if(!preferences.getBoolean(t6.getName(), false)) {
+                editor.putBoolean(t6.getName(), t6.isSaved());
+                editor.apply();
+            }
+            saved = preferences.getBoolean(t6.getName(), false);
+            t6.setSaved(saved);
 
             Coupons t7=new Coupons("Coupon 7");
             t7.deals.add("Description of coupon 7\n");
@@ -208,6 +236,12 @@ public class SlidingTabsBasicFragment extends Fragment {
             cal7.set(Calendar.DAY_OF_MONTH, 1);
             Date date7 = cal7.getTime();
             t7.setExpire(date7);
+            if(!preferences.getBoolean(t7.getName(), false)) {
+                editor.putBoolean(t7.getName(), t7.isSaved());
+                editor.apply();
+            }
+            saved = preferences.getBoolean(t7.getName(), false);
+            t7.setSaved(saved);
 
             Coupons t8=new Coupons("Coupon 8");
             t8.deals.add("Description of coupon 8\n");
@@ -219,6 +253,12 @@ public class SlidingTabsBasicFragment extends Fragment {
             cal8.set(Calendar.DAY_OF_MONTH, 1);
             Date date8 = cal8.getTime();
             t8.setExpire(date8);
+            if(!preferences.getBoolean(t8.getName(), false)) {
+                editor.putBoolean(t8.getName(), t8.isSaved());
+                editor.apply();
+            }
+            saved = preferences.getBoolean(t8.getName(), false);
+            t8.setSaved(saved);
 
             Coupons t9=new Coupons("Coupon 9");
             t9.deals.add("Description of coupon 9\n");
@@ -230,6 +270,12 @@ public class SlidingTabsBasicFragment extends Fragment {
             cal9.set(Calendar.DAY_OF_MONTH, 1);
             Date date9 = cal9.getTime();
             t9.setExpire(date9);
+            if(!preferences.getBoolean(t9.getName(), false)) {
+                editor.putBoolean(t9.getName(), t9.isSaved());
+                editor.apply();
+            }
+            saved = preferences.getBoolean(t9.getName(), false);
+            t9.setSaved(saved);
 
             Coupons t10=new Coupons("Coupon 10");
             t10.deals.add("Description of coupon 10\n");
@@ -241,6 +287,12 @@ public class SlidingTabsBasicFragment extends Fragment {
             cal10.set(Calendar.DAY_OF_MONTH, 1);
             Date date10 = cal10.getTime();
             t10.setExpire(date10);
+            if(!preferences.getBoolean(t10.getName(), false)) {
+                editor.putBoolean(t10.getName(), t10.isSaved());
+                editor.apply();
+            }
+            saved = preferences.getBoolean(t10.getName(), false);
+            t10.setSaved(saved);
 
             Coupons t11=new Coupons("Coupon 11");
             t11.deals.add("Description of coupon 11\n");
@@ -252,6 +304,12 @@ public class SlidingTabsBasicFragment extends Fragment {
             cal11.set(Calendar.DAY_OF_MONTH, 1);
             Date date11 = cal11.getTime();
             t11.setExpire(date11);
+            if(!preferences.getBoolean(t11.getName(), false)) {
+                editor.putBoolean(t11.getName(), t11.isSaved());
+                editor.apply();
+            }
+            saved = preferences.getBoolean(t11.getName(), false);
+            t11.setSaved(saved);
 
             ArrayList<Coupons> allCoupons=new ArrayList<Coupons>();
             allCoupons.add(t1);
@@ -266,9 +324,10 @@ public class SlidingTabsBasicFragment extends Fragment {
             allCoupons.add(t10);
             allCoupons.add(t11);
 
-            if(getSavedList()){
+            if(getSavedList()){//TODO use new array list of saved coupons
                 for(int i =allCoupons.size()-1; i>=0; i--){
-                    if(!allCoupons.get(i).isSaved())
+                    saved = preferences.getBoolean(allCoupons.get(i).getName(), false);
+                    if(!saved)
                         allCoupons.remove(i);
                 }
             }
@@ -319,5 +378,16 @@ public class SlidingTabsBasicFragment extends Fragment {
             }
             return allCoupons;
         }
+
+        private ArrayList<Coupons> saving(ArrayList<Coupons> coupons)
+        {
+            ArrayList<Coupons> savedCoupons=new ArrayList<Coupons>();
+            for(int i =coupons.size()-1; i>=0; i--){
+                if(coupons.get(i).isSaved())
+                    savedCoupons.add(coupons.get(i));
+            }
+            return savedCoupons;
+        }
+
     }
 }

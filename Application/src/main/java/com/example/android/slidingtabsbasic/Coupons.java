@@ -8,7 +8,7 @@ import java.util.Date;
  */
 public class Coupons {
     String category;
-    boolean saved =false;
+    boolean saved;
     boolean featured =false;
     boolean redeemed =false;
     String name;

@@ -40,7 +40,7 @@ public class InviteActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        FloatingActionButton fab2 = (FloatingActionButton) findViewById(R.id.fab);
+        FloatingActionButton fab2 = (FloatingActionButton) findViewById(R.id.fab2);
         assert fab2 != null;
         fab2.setOnClickListener(new View.OnClickListener() {
             @Override

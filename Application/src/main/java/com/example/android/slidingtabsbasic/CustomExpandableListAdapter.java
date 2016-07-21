@@ -5,7 +5,9 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.graphics.Color;
+import android.preference.PreferenceManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,11 +23,15 @@ public class CustomExpandableListAdapter extends BaseExpandableListAdapter {
         private Context c;
         private ArrayList<Coupons> coupons;
         private LayoutInflater inflater;
+        private boolean saved;
+        public ArrayList<Coupons> savedCoupons=new ArrayList<Coupons>();
 
-        public CustomExpandableListAdapter(Context c,ArrayList<Coupons> coupons)
+        public CustomExpandableListAdapter(Context c,ArrayList<Coupons> coupons)//,ArrayList<Coupons> savedCoupons, boolean saved)
         {
             this.c=c;
             this.coupons=coupons;
+            //this.savedCoupons=savedCoupons;
+            //this.saved = saved;
             inflater=(LayoutInflater) c.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         }
         //GET A SINGLE PLAYER
@@ -81,29 +87,32 @@ public class CustomExpandableListAdapter extends BaseExpandableListAdapter {
             childHolder.name.setText(child);
             boolean saved=(boolean) getSaved(groupPos);
             childHolder.checkBox1.setChecked(saved);
+
             childHolder.checkBox1.setOnClickListener(
                     new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
+                            SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(c);
+                            SharedPreferences.Editor editor = preferences.edit();
                             if(((CheckBox)v).isChecked()) {
                                 childHolder.checkBox1.setChecked(true);
+                                //TODO create array list of saved coupons
+
+                                editor.putBoolean(coupons.get(groupPos).getName(), true);
+                                editor.apply();
                                 setSaved(groupPos,true);
+                                savedCoupons.add(coupons.get(groupPos));
                                 Toast.makeText(c,
                                         "this is saved",Toast.LENGTH_LONG).show();
+                            }
+                            else{
+                                editor.putBoolean(coupons.get(groupPos).getName(), false);
+                                editor.apply();
                             }
                         }
                     }
             );
-            /*childHolder.checkBox1
-                    .setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-                        @Override
-                        public void onCheckedChanged(CompoundButton button,
-                                                     boolean isChecked) {
-                            Coupons item = (Coupons) childHolder.checkBox1.getTag();
-                            item.setSaved(button.isChecked());// cause Null Pointer Exception
-                            TODO fix NullPointerException
-                        }
-                    });*/
+
             //childHolder.button.
             //TODO implement redeem button MAKE INTENT TO CARRY TO VOUCHER PAGE&MAKE VOUCHER PAGE
 
@@ -204,4 +213,8 @@ public class CustomExpandableListAdapter extends BaseExpandableListAdapter {
             // TODO Auto-generated method stub
             return true;
         }
+
+    public ArrayList<Coupons> getSavedCoupons() {
+        return savedCoupons;
+    }
 }
