@@ -70,9 +70,10 @@
     <string name="pref_ringtone_silent">Silent</string>
 
     <string name="pref_title_vibrate">Vibrate</string>
-    <string name="title_activity_invite">InviteActivity</string>
-    <string name="title_activity_about">AboutActivity</string>
-    <string name="title_activity_contact">ContactActivity</string>
-    <string name="title_activity_saved">SavedActivity</string>
+    <string name="title_activity_invite">Invite Your Neighbors</string>
+    <string name="title_activity_about">About We Are Henry</string>
+    <string name="title_activity_contact">Contact Us</string>
+    <string name="title_activity_saved">My Henry\'s</string>
+    <string name="title_activity_voucher">VoucherActivity</string>
 
 </resources>

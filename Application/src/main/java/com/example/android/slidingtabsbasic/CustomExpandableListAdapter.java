@@ -68,9 +68,9 @@ public class CustomExpandableListAdapter extends BaseExpandableListAdapter {
             if( convertView == null ){
                 convertView = inflater.inflate(R.layout.deal, null);
                 childHolder = new ChildHolder();
-                childHolder.checkBox1 = (CheckBox) convertView.findViewById(R.id.checkBox);// TODO saving stuff
+                childHolder.checkBox1 = (CheckBox) convertView.findViewById(R.id.checkBox);
                 childHolder.name=(TextView)convertView.findViewById(R.id.textView1);
-                //childHolder.button = (Button) convertView.findViewById(R.id.button); TODO redeem button
+                //childHolder.button = (Button) convertView.findViewById(R.id.button); //TODO redeem button
                 convertView.setTag(childHolder);
             }else{
                 childHolder = (ChildHolder) convertView.getTag();
@@ -88,13 +88,13 @@ public class CustomExpandableListAdapter extends BaseExpandableListAdapter {
                             SharedPreferences.Editor editor = preferences.edit();
                             if(((CheckBox)v).isChecked()) {
                                 childHolder.checkBox1.setChecked(true);
-                                editor.putBoolean(coupons.get(groupPos).getName(), true);// edits prefences to hold data of saved coupon
+                                editor.putBoolean(coupons.get(groupPos).getName(), true);// edits preferences to hold data of saved coupon
                                 editor.apply();
                                 Toast.makeText(c,
                                         "this is saved",Toast.LENGTH_LONG).show();// TODO remove when debugging is over
                             }
                             else{
-                                editor.putBoolean(coupons.get(groupPos).getName(), false);// edits prefences to hold data of saved coupon
+                                editor.putBoolean(coupons.get(groupPos).getName(), false);// edits preferences to hold data of saved coupon
                                 editor.apply();
                             }
                         }

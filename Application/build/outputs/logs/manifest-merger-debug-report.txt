@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Mike\AndroidStudioProjects\SlidingTabsBasic\SlidingTabsBasic\Application\src\main\AndroidManifest.xml:16:1-75:12
+ADDED from C:\Users\Mike\AndroidStudioProjects\SlidingTabsBasic\SlidingTabsBasic\Application\src\main\AndroidManifest.xml:16:1-84:12
 	package
 		ADDED from C:\Users\Mike\AndroidStudioProjects\SlidingTabsBasic\SlidingTabsBasic\Application\src\main\AndroidManifest.xml:17:5-51
 	android:versionName
@@ -14,7 +14,7 @@ ADDED from C:\Users\Mike\AndroidStudioProjects\SlidingTabsBasic\SlidingTabsBasic
 	xmlns:android
 		ADDED from C:\Users\Mike\AndroidStudioProjects\SlidingTabsBasic\SlidingTabsBasic\Application\src\main\AndroidManifest.xml:16:11-69
 application
-ADDED from C:\Users\Mike\AndroidStudioProjects\SlidingTabsBasic\SlidingTabsBasic\Application\src\main\AndroidManifest.xml:22:5-73:19
+ADDED from C:\Users\Mike\AndroidStudioProjects\SlidingTabsBasic\SlidingTabsBasic\Application\src\main\AndroidManifest.xml:22:5-82:19
 MERGED from [com.android.support:support-v4:23.4.0] C:\Users\Mike\AndroidStudioProjects\SlidingTabsBasic\SlidingTabsBasic\Application\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v13:23.4.0] C:\Users\Mike\AndroidStudioProjects\SlidingTabsBasic\SlidingTabsBasic\Application\build\intermediates\exploded-aar\com.android.support\support-v13\23.4.0\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:23.4.0] C:\Users\Mike\AndroidStudioProjects\SlidingTabsBasic\SlidingTabsBasic\Application\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:22:5-20
@@ -108,6 +108,16 @@ ADDED from C:\Users\Mike\AndroidStudioProjects\SlidingTabsBasic\SlidingTabsBasic
 		ADDED from C:\Users\Mike\AndroidStudioProjects\SlidingTabsBasic\SlidingTabsBasic\Application\src\main\AndroidManifest.xml:68:13-69
 	android:name
 		ADDED from C:\Users\Mike\AndroidStudioProjects\SlidingTabsBasic\SlidingTabsBasic\Application\src\main\AndroidManifest.xml:65:13-42
+activity#com.example.android.slidingtabsbasic.VoucherActivity
+ADDED from C:\Users\Mike\AndroidStudioProjects\SlidingTabsBasic\SlidingTabsBasic\Application\src\main\AndroidManifest.xml:73:9-81:20
+	android:label
+		ADDED from C:\Users\Mike\AndroidStudioProjects\SlidingTabsBasic\SlidingTabsBasic\Application\src\main\AndroidManifest.xml:75:13-59
+	android:parentActivityName
+		ADDED from C:\Users\Mike\AndroidStudioProjects\SlidingTabsBasic\SlidingTabsBasic\Application\src\main\AndroidManifest.xml:76:13-55
+	android:theme
+		ADDED from C:\Users\Mike\AndroidStudioProjects\SlidingTabsBasic\SlidingTabsBasic\Application\src\main\AndroidManifest.xml:77:13-69
+	android:name
+		ADDED from C:\Users\Mike\AndroidStudioProjects\SlidingTabsBasic\SlidingTabsBasic\Application\src\main\AndroidManifest.xml:74:13-44
 uses-sdk
 INJECTED from C:\Users\Mike\AndroidStudioProjects\SlidingTabsBasic\SlidingTabsBasic\Application\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:support-v4:23.4.0] C:\Users\Mike\AndroidStudioProjects\SlidingTabsBasic\SlidingTabsBasic\Application\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:20:5-43

@@ -2,4 +2,5 @@
 <resources>
     <color name="primaryDarkColorActionBar">#13B911</color>
     <color name="primaryColorActionBar">#13B911</color>
+    <color name="white">#ffffff</color>
 </resources>
