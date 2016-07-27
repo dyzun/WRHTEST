@@ -34,9 +34,44 @@ public class VoucherActivity extends AppCompatActivity {
 
         if(bundle != null){
             nameTv.setText(bundle.getString("name"));
-            dateTv.setText(bundle.getString("date"));
+            dateTv.setText("Expires: " +bundle.getString("date"));
             dets.setText(bundle.getString("dets"));
             voucher.append(bundle.getString("Voc"));
+            switch (bundle.getString("name")) {
+                case "Coupon 1":
+                    img.setImageResource(R.drawable.cop1);
+                    break;
+                case "Coupon 2":
+                    img.setImageResource(R.drawable.cop2);
+                    break;
+                case "Coupon 3":
+                    img.setImageResource(R.drawable.cop3);
+                    break;
+                case "Coupon 4":
+                    img.setImageResource(R.drawable.cop4);
+                    break;
+                case "Coupon 5":
+                    img.setImageResource(R.drawable.cop5);
+                    break;
+                case "Coupon 6":
+                    img.setImageResource(R.drawable.cop6);
+                    break;
+                case "Coupon 7":
+                    img.setImageResource(R.drawable.cop7);
+                    break;
+                case "Coupon 8":
+                    img.setImageResource(R.drawable.cop8);
+                    break;
+                case "Coupon 9":
+                    img.setImageResource(R.drawable.cop9);
+                    break;
+                case "Coupon 10":
+                    img.setImageResource(R.drawable.cop10);
+                    break;
+                case "Coupon 11":
+                    img.setImageResource(R.drawable.cop11);
+                    break;
+            }
         }
 
 

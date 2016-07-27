@@ -4,32 +4,37 @@
     api-level="23"
     density="xxxhdpi"
     format="7"
-    timestamp="525644650342656"
+    timestamp="16424800469670"
     token="-1008174478895831182" >
 
     <task
         name="javac"
-        duration="3678" />
+        duration="2724" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="214" />
+        duration="124" />
     <task
         name="verifier"
-        duration="119" />
+        duration="49" />
 
     <artifact
         location="C:\Users\Mike\AndroidStudioProjects\SlidingTabsBasic\SlidingTabsBasic\Application\build\intermediates\transforms\dex\debug\folders\1000\5\slice_8\classes.dex"
         type="DEX" />
 
-    <build timestamp="524781992100875" >
+    <build timestamp="16275035606174" >
         <artifact
             location="C:\Users\Mike\AndroidStudioProjects\SlidingTabsBasic\SlidingTabsBasic\Application\build\outputs\apk\Application-debug.apk"
             type="MAIN" />
     </build>
-    <build timestamp="525644650342656" >
+    <build timestamp="16408701846208" >
+        <artifact
+            location="C:\Users\Mike\AndroidStudioProjects\SlidingTabsBasic\SlidingTabsBasic\Application\build\intermediates\res\resources-debug.ap_"
+            type="RESOURCES" />
+    </build>
+    <build timestamp="16424800469670" >
         <artifact
             location="C:\Users\Mike\AndroidStudioProjects\SlidingTabsBasic\SlidingTabsBasic\Application\build\intermediates\transforms\dex\debug\folders\1000\5\slice_8\classes.dex"
             type="DEX" />

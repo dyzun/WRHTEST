@@ -6,8 +6,10 @@
       android:orientation="vertical"
       android:gravity="center">
 
-    <!--TODO add category image/text-->
-
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray" />
     <ExpandableListView
         android:id="@+id/expandableListView1"
         android:layout_width="match_parent"

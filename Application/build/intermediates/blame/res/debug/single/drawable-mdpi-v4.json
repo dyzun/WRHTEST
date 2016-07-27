@@ -76,6 +76,10 @@
         "source": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png"
     },
     {
+        "merged": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\featured.jpg",
+        "source": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\src\\main\\res\\drawable-mdpi\\featured.jpg"
+    },
+    {
         "merged": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_list_selector_disabled_holo_light.9.png",
         "source": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_list_selector_disabled_holo_light.9.png"
     },
@@ -86,6 +90,10 @@
     {
         "merged": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_commit_search_api_mtrl_alpha.png",
         "source": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_ic_commit_search_api_mtrl_alpha.png"
+    },
+    {
+        "merged": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\services.jpg",
+        "source": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\src\\main\\res\\drawable-mdpi\\services.jpg"
     },
     {
         "merged": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\cop11.jpg",
@@ -132,6 +140,10 @@
         "source": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_textfield_search_activated_mtrl_alpha.9.png"
     },
     {
+        "merged": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\travel.jpg",
+        "source": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\src\\main\\res\\drawable-mdpi\\travel.jpg"
+    },
+    {
         "merged": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png",
         "source": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png"
     },
@@ -148,8 +160,20 @@
         "source": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png"
     },
     {
+        "merged": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\retail.jpg",
+        "source": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\src\\main\\res\\drawable-mdpi\\retail.jpg"
+    },
+    {
         "merged": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_scrubber_control_off_mtrl_alpha.png",
         "source": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-mdpi-v4\\abc_scrubber_control_off_mtrl_alpha.png"
+    },
+    {
+        "merged": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\food.jpg",
+        "source": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\src\\main\\res\\drawable-mdpi\\food.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\wellness.jpg",
+        "source": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\src\\main\\res\\drawable-mdpi\\wellness.jpg"
     },
     {
         "merged": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\abc_btn_radio_to_on_mtrl_015.png",
@@ -174,6 +198,10 @@
     {
         "merged": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\cop9.png",
         "source": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\src\\main\\res\\drawable-mdpi\\cop9.png"
+    },
+    {
+        "merged": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\fun.jpg",
+        "source": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\src\\main\\res\\drawable-mdpi\\fun.jpg"
     },
     {
         "merged": "C:\\Users\\Mike\\AndroidStudioProjects\\SlidingTabsBasic\\SlidingTabsBasic\\Application\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4\\cop8.jpg",

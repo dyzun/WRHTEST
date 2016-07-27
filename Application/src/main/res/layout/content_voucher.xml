@@ -42,7 +42,9 @@
         android:layout_below="@id/imageView1"
         android:textSize="18sp"
         android:textStyle="bold"
-        />
+        android:layout_above="@+id/details"
+        android:layout_alignRight="@+id/imageView1"
+        android:layout_alignEnd="@+id/imageView1" />
     <TextView
         android:id="@+id/details"
         android:layout_width="wrap_content"
@@ -69,9 +71,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Vocuher Code \n"
+        android:textAlignment="center"
+        android:text="Voucher Code \n"
         android:id="@+id/textView3"
-        android:layout_centerVertical="true"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
 
 

@@ -109,7 +109,8 @@ public class CustomExpandableListAdapter extends BaseExpandableListAdapter {
                             SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(c);
                             Intent intent = new Intent(c, VoucherActivity.class);
                             intent.putExtra("name", coupons.get(groupPos).getName());
-                            intent.putExtra("date", coupons.get(groupPos).getExpire());
+                            String stringDate = DateFormat.getDateInstance().format(coupons.get(groupPos).getExpire());
+                            intent.putExtra("date",stringDate );
                             intent.putExtra("dets", childHolder.name.getText().toString());
                             intent.putExtra("saved", preferences.getBoolean(coupons.get(groupPos).getName(), false));
                             intent.putExtra("Voc",coupons.get(groupPos).getVoc() );

@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ExpandableListView;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.android.common.view.SlidingTabLayout;
@@ -53,7 +54,7 @@ public class SlidingTabsBasicFragment extends Fragment {
 
         @Override
         public int getCount() {
-            return 6;
+            return 7;
         }
 
         @Override
@@ -75,7 +76,9 @@ public class SlidingTabsBasicFragment extends Fragment {
                     break;
                 case 4: title = "Travel";
                     break;
-                case 5: title = "Wellness";
+                case 5: title = "Services";
+                    break;
+                case 6: title = "Wellness";
                     break;
                 default:title = "Featured";
                     break;
@@ -93,6 +96,36 @@ public class SlidingTabsBasicFragment extends Fragment {
             ExpandableListView elv=(ExpandableListView) view.findViewById(R.id.expandableListView1);
             final ArrayList<Coupons> Coupons=getData(position);
 
+            View header = getActivity().getLayoutInflater().inflate(R.layout.header, null);
+
+            ImageView img=(ImageView) header.findViewById(R.id.catPic);
+            switch(position){
+                case 0:
+                    img.setImageResource(R.drawable.featured);
+                    break;
+                case 1:
+                    img.setImageResource(R.drawable.fun);
+                    break;
+                case 2:
+                    img.setImageResource(R.drawable.food);
+                    break;
+                case 3:
+                    img.setImageResource(R.drawable.retail);
+                    break;
+                case 4:
+                    img.setImageResource(R.drawable.travel);
+                    break;
+                case 5:
+                    img.setImageResource(R.drawable.services);
+                    break;
+                case 6:
+                    img.setImageResource(R.drawable.wellness);
+                    break;
+                default:
+                    img.setImageResource(R.drawable.featured);
+                    break;
+            }
+            elv.addHeaderView(header);
             //CREATE AND BIND TO ADAPTER
             CustomExpandableListAdapter adapter = new CustomExpandableListAdapter(getActivity(), Coupons);
             elv.setAdapter(adapter);
@@ -385,8 +418,14 @@ public class SlidingTabsBasicFragment extends Fragment {
                     break;
                 case 5:
                     for(int i =allCoupons.size()-1; i>=0; i--){
-                        if(!allCoupons.get(i).getCategory().equals("Wellness"))
+                        if(!allCoupons.get(i).getCategory().equals("Services"))
                         allCoupons.remove(i);
+                    }
+                    break;
+                case 6:
+                    for(int i =allCoupons.size()-1; i>=0; i--){
+                        if(!allCoupons.get(i).getCategory().equals("Wellness"))
+                            allCoupons.remove(i);
                     }
                     break;
                 default:
