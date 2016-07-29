@@ -1,0 +1,82 @@
+<html>
+<head>
+<title>InviteActivity.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.ln { color: rgb(0,0,0); font-weight: normal; font-style: normal; }
+.s0 { color: rgb(0,0,128); font-weight: bold; }
+.s1 { color: rgb(0,0,0); }
+.s2 { color: rgb(128,128,128); font-style: italic; }
+.s3 { color: rgb(0,128,0); font-weight: bold; }
+</style>
+</head>
+<BODY BGCOLOR="#ffffff">
+<TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#C0C0C0" >
+<TR><TD><CENTER>
+<FONT FACE="Arial, Helvetica" COLOR="#000000">
+InviteActivity.java</FONT>
+</center></TD></TR></TABLE>
+<pre>
+<span class="s0">package </span><span class="s1">com.example.android.slidingtabsbasic; 
+ 
+</span><span class="s0">import </span><span class="s1">android.content.Intent; 
+</span><span class="s0">import </span><span class="s1">android.graphics.drawable.ColorDrawable; 
+</span><span class="s0">import </span><span class="s1">android.net.Uri; 
+</span><span class="s0">import </span><span class="s1">android.os.Bundle; 
+</span><span class="s0">import </span><span class="s1">android.support.design.widget.FloatingActionButton; 
+</span><span class="s0">import </span><span class="s1">android.support.design.widget.Snackbar; 
+</span><span class="s0">import </span><span class="s1">android.support.v7.app.AppCompatActivity; 
+</span><span class="s0">import </span><span class="s1">android.support.v7.widget.Toolbar; 
+</span><span class="s0">import </span><span class="s1">android.text.Html; 
+</span><span class="s0">import </span><span class="s1">android.view.View; 
+</span><span class="s0">import </span><span class="s1">android.widget.EditText; 
+ 
+</span><span class="s0">public class </span><span class="s1">InviteActivity </span><span class="s0">extends </span><span class="s1">AppCompatActivity { 
+ 
+    @Override 
+    </span><span class="s0">protected void </span><span class="s1">onCreate(Bundle savedInstanceState) { 
+        </span><span class="s0">super</span><span class="s1">.onCreate(savedInstanceState); 
+        setContentView(R.layout.activity_invite); 
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar); 
+        setSupportActionBar(toolbar); 
+ 
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab); 
+        </span><span class="s0">assert </span><span class="s1">fab != </span><span class="s0">null</span><span class="s1">; 
+        fab.setOnClickListener(</span><span class="s0">new </span><span class="s1">View.OnClickListener() { 
+            @Override 
+            </span><span class="s0">public void </span><span class="s1">onClick(View view) { 
+                Intent intent = </span><span class="s0">new </span><span class="s1">Intent(Intent.ACTION_SENDTO); </span><span class="s2">// it's not ACTION_SEND</span><span class="s1"> 
+                intent.setType(</span><span class="s3">&quot;text/plain&quot;</span><span class="s1">); 
+                EditText edt1 = (EditText)findViewById(R.id.editText); 
+                String abc = edt1.getText().toString(); 
+                intent.putExtra(Intent.EXTRA_SUBJECT, </span><span class="s3">&quot;Invitation to We Are Henry&quot;</span><span class="s1">); 
+                intent.putExtra(Intent.EXTRA_TEXT, </span><span class="s3">&quot;Hello there, &quot; </span><span class="s1">+abc +</span><span class="s3">&quot; , I'd like to invite you to try the We Are Henry app!&quot; </span><span class="s1">+ 
+                        </span><span class="s3">&quot;</span><span class="s0">\n\n</span><span class="s3">link to GooglePlayStore&quot;</span><span class="s1">); 
+                EditText edt = (EditText)findViewById(R.id.editText2); 
+                String xyz = edt.getText().toString(); 
+                intent.setData(Uri.parse(</span><span class="s3">&quot;mailto:&quot;</span><span class="s1">+xyz)); 
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK); 
+                startActivity(intent); 
+            } 
+        }); 
+        FloatingActionButton fab2 = (FloatingActionButton) findViewById(R.id.fab2); 
+        </span><span class="s0">assert </span><span class="s1">fab2 != </span><span class="s0">null</span><span class="s1">; 
+        fab2.setOnClickListener(</span><span class="s0">new </span><span class="s1">View.OnClickListener() { 
+            @Override 
+            </span><span class="s0">public void </span><span class="s1">onClick(View view) { 
+                EditText edt3 = (EditText)findViewById(R.id.editText3); 
+                String phoneNumber = edt3.getText().toString(); 
+                Intent intent = </span><span class="s0">new </span><span class="s1">Intent(Intent.ACTION_VIEW, Uri.parse(</span><span class="s3">&quot;sms:&quot; </span><span class="s1">+ phoneNumber)); 
+                intent.putExtra(</span><span class="s3">&quot;sms_body&quot;</span><span class="s1">, </span><span class="s3">&quot;Hello there, I'd like to invite you to try the We Are Henry app!&quot; </span><span class="s1">+ 
+                        </span><span class="s3">&quot;</span><span class="s0">\n\n</span><span class="s3">link to GooglePlayStore&quot;</span><span class="s1">); 
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK); 
+                startActivity(intent); 
+            } 
+        }); 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(</span><span class="s0">true</span><span class="s1">); 
+    } 
+ 
+} 
+</span></pre>
+</body>
+</html>

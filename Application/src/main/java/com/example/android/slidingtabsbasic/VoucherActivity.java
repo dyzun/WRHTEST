@@ -3,12 +3,12 @@ package com.example.android.slidingtabsbasic;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 
 public class VoucherActivity extends AppCompatActivity {
 
@@ -78,11 +78,32 @@ public class VoucherActivity extends AppCompatActivity {
 
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        assert fab !=null;
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                /*String fromEmail = "wrhalert@gmail.com";
+                String fromPassword = "WRHcountyGeorgia";
+                String toEmails = "dyzun71@gmail.com";
+                String adminEmail = "admin@gmail.com";
+                String emailSubject = "Voucher redeemed";
+                String adminSubject = "Voucher redeemed";
+                TextView nameTv = (TextView) findViewById(R.id.textView1);
+                assert nameTv !=null;
+                String voucher1=nameTv.getText().toString();
+                String emailBody = "1 Vocuher for " + voucher1 + " has been redeemed";
+                String adminBody = "1 Vocuher for " + voucher1 + " has been redeemed";
+                try{
+                    new SendMailTask(VoucherActivity.this).execute(fromEmail,
+                            fromPassword, toEmails, emailSubject, emailBody);
+                } catch (Exception e) {
+                    Log.e("SendMail", e.getMessage(), e);
+                }
+
+            */
+            Intent intent = new Intent(VoucherActivity.this,MainActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
             }
         });
         //getSupportActionBar().setDisplayHomeAsUpEnabled(true);

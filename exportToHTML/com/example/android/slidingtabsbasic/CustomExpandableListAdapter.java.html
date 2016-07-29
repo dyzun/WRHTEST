@@ -1,0 +1,248 @@
+<html>
+<head>
+<title>CustomExpandableListAdapter.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.ln { color: rgb(0,0,0); font-weight: normal; font-style: normal; }
+.s0 { color: rgb(0,0,128); font-weight: bold; }
+.s1 { color: rgb(0,0,0); }
+.s2 { color: rgb(128,128,128); font-style: italic; }
+.s3 { color: rgb(0,0,255); }
+.s4 { color: rgb(0,128,0); font-weight: bold; }
+</style>
+</head>
+<BODY BGCOLOR="#ffffff">
+<TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#C0C0C0" >
+<TR><TD><CENTER>
+<FONT FACE="Arial, Helvetica" COLOR="#000000">
+CustomExpandableListAdapter.java</FONT>
+</center></TD></TR></TABLE>
+<pre>
+<span class="s0">package </span><span class="s1">com.example.android.slidingtabsbasic; 
+ 
+</span><span class="s0">import </span><span class="s1">android.content.Context; 
+</span><span class="s0">import </span><span class="s1">android.content.Intent; 
+</span><span class="s0">import </span><span class="s1">android.content.SharedPreferences; 
+</span><span class="s0">import </span><span class="s1">android.graphics.Color; 
+</span><span class="s0">import </span><span class="s1">android.preference.PreferenceManager; 
+</span><span class="s0">import </span><span class="s1">android.view.LayoutInflater; 
+</span><span class="s0">import </span><span class="s1">android.view.View; 
+</span><span class="s0">import </span><span class="s1">android.view.ViewGroup; 
+</span><span class="s0">import </span><span class="s1">android.widget.BaseExpandableListAdapter; 
+</span><span class="s0">import </span><span class="s1">android.widget.Button; 
+</span><span class="s0">import </span><span class="s1">android.widget.CheckBox; 
+</span><span class="s0">import </span><span class="s1">android.widget.ImageView; 
+</span><span class="s0">import </span><span class="s1">android.widget.TextView; 
+</span><span class="s0">import </span><span class="s1">android.widget.Toast; 
+ 
+</span><span class="s0">import </span><span class="s1">java.text.DateFormat; 
+</span><span class="s0">import </span><span class="s1">java.util.ArrayList; 
+</span><span class="s0">import </span><span class="s1">java.util.Date; 
+ 
+</span><span class="s0">public class </span><span class="s1">CustomExpandableListAdapter </span><span class="s0">extends </span><span class="s1">BaseExpandableListAdapter { 
+        </span><span class="s0">private </span><span class="s1">Context c; 
+        </span><span class="s0">private </span><span class="s1">ArrayList&lt;Coupons&gt; coupons; 
+        </span><span class="s0">private </span><span class="s1">LayoutInflater inflater; 
+ 
+        </span><span class="s0">public </span><span class="s1">CustomExpandableListAdapter(Context c,ArrayList&lt;Coupons&gt; coupons) 
+        { 
+            </span><span class="s0">this</span><span class="s1">.c=c; 
+            </span><span class="s0">this</span><span class="s1">.coupons=coupons; 
+            inflater=(LayoutInflater) c.getSystemService(Context.LAYOUT_INFLATER_SERVICE); 
+        } 
+        </span><span class="s2">//GET A SINGLE PLAYER</span><span class="s1"> 
+        @Override 
+        </span><span class="s0">public </span><span class="s1">Object getChild(</span><span class="s0">int </span><span class="s1">groupPos, </span><span class="s0">int </span><span class="s1">childPos) { 
+            </span><span class="s2">// TODO Auto-generated method stub</span><span class="s1"> 
+            </span><span class="s0">return </span><span class="s1">coupons.get(groupPos).deals.get(childPos); 
+        } 
+        </span><span class="s2">//GET PLAYER ID</span><span class="s1"> 
+        @Override 
+        </span><span class="s0">public long </span><span class="s1">getChildId(</span><span class="s0">int </span><span class="s1">arg0, </span><span class="s0">int </span><span class="s1">arg1) { 
+            </span><span class="s2">// TODO Auto-generated method stub</span><span class="s1"> 
+            </span><span class="s0">return </span><span class="s3">0</span><span class="s1">; 
+        } 
+        </span><span class="s0">class </span><span class="s1">ChildHolder { 
+            CheckBox checkBox1; 
+            TextView name; 
+            Button button; 
+        } 
+        </span><span class="s0">public </span><span class="s1">Object getRedeemed(</span><span class="s0">int </span><span class="s1">groupPos) { 
+        </span><span class="s2">// TODO Auto-generated method stub</span><span class="s1"> 
+            </span><span class="s0">return </span><span class="s1">coupons.get(groupPos).redeemed; 
+        } 
+        </span><span class="s0">public </span><span class="s1">Object getSaved(</span><span class="s0">int </span><span class="s1">groupPos) { 
+        </span><span class="s2">//TODO Auto-generated method stub</span><span class="s1"> 
+          </span><span class="s0">return </span><span class="s1">coupons.get(groupPos).saved; 
+        } 
+ 
+        </span><span class="s2">//GET PLAYER ROW</span><span class="s1"> 
+        @Override 
+        </span><span class="s0">public </span><span class="s1">View getChildView(</span><span class="s0">final int </span><span class="s1">groupPos, </span><span class="s0">int </span><span class="s1">childPos, </span><span class="s0">boolean </span><span class="s1">isLastChild, View convertView, 
+                                 ViewGroup parent) { 
+            </span><span class="s2">//ONLY INFLATER XML ROW LAYOUT IF ITS NOT PRESENT,OTHERWISE REUSE IT</span><span class="s1"> 
+            </span><span class="s2">/*if(convertView==null) 
+            { 
+                convertView=inflater.inflate(R.layout.deal, null); 
+            }*/</span><span class="s1"> 
+            </span><span class="s0">final </span><span class="s1">ChildHolder childHolder; 
+            </span><span class="s0">if</span><span class="s1">( convertView == </span><span class="s0">null </span><span class="s1">){ 
+                convertView = inflater.inflate(R.layout.deal, </span><span class="s0">null</span><span class="s1">); 
+                childHolder = </span><span class="s0">new </span><span class="s1">ChildHolder(); 
+                childHolder.checkBox1 = (CheckBox) convertView.findViewById(R.id.checkBox); 
+                childHolder.name=(TextView)convertView.findViewById(R.id.textView1); 
+                childHolder.button = (Button) convertView.findViewById(R.id.button); </span><span class="s2">//TODO redeem button</span><span class="s1"> 
+                convertView.setTag(childHolder); 
+            }</span><span class="s0">else</span><span class="s1">{ 
+                childHolder = (ChildHolder) convertView.getTag(); 
+            } 
+            String  child=(String) getChild(groupPos, childPos); 
+            childHolder.name.setText(child); 
+            </span><span class="s0">boolean </span><span class="s1">saved=(</span><span class="s0">boolean</span><span class="s1">) getSaved(groupPos); 
+            childHolder.checkBox1.setChecked(saved); 
+            </span><span class="s0">assert </span><span class="s1">childHolder.button != </span><span class="s0">null</span><span class="s1">; 
+            childHolder.checkBox1.setOnClickListener( 
+                    </span><span class="s0">new </span><span class="s1">View.OnClickListener() { 
+                        @Override 
+                        </span><span class="s0">public void </span><span class="s1">onClick(View v) { 
+                            SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(c); 
+                            SharedPreferences.Editor editor = preferences.edit(); 
+                            </span><span class="s0">if</span><span class="s1">(((CheckBox)v).isChecked()) { 
+                                childHolder.checkBox1.setChecked(</span><span class="s0">true</span><span class="s1">); 
+                                editor.putBoolean(coupons.get(groupPos).getName(), </span><span class="s0">true</span><span class="s1">);</span><span class="s2">// edits preferences to hold data of saved coupon</span><span class="s1"> 
+                                editor.apply(); 
+                                Toast.makeText(c, 
+                                        </span><span class="s4">&quot;this is saved&quot;</span><span class="s1">,Toast.LENGTH_LONG).show();</span><span class="s2">// TODO remove when debugging is over</span><span class="s1"> 
+                            } 
+                            </span><span class="s0">else</span><span class="s1">{ 
+                                editor.putBoolean(coupons.get(groupPos).getName(), </span><span class="s0">false</span><span class="s1">);</span><span class="s2">// edits preferences to hold data of saved coupon</span><span class="s1"> 
+                                editor.apply(); 
+                            } 
+                        } 
+                    } 
+            ); 
+ 
+            childHolder.button.setOnClickListener( 
+                    </span><span class="s0">new </span><span class="s1">View.OnClickListener() { 
+                        @Override 
+                        </span><span class="s0">public void </span><span class="s1">onClick(View v) { 
+                            SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(c); 
+                            Intent intent = </span><span class="s0">new </span><span class="s1">Intent(c, VoucherActivity.</span><span class="s0">class</span><span class="s1">); 
+                            intent.putExtra(</span><span class="s4">&quot;name&quot;</span><span class="s1">, coupons.get(groupPos).getName()); 
+                            String stringDate = DateFormat.getDateInstance().format(coupons.get(groupPos).getExpire()); 
+                            intent.putExtra(</span><span class="s4">&quot;date&quot;</span><span class="s1">,stringDate ); 
+                            intent.putExtra(</span><span class="s4">&quot;dets&quot;</span><span class="s1">, childHolder.name.getText().toString()); 
+                            intent.putExtra(</span><span class="s4">&quot;saved&quot;</span><span class="s1">, preferences.getBoolean(coupons.get(groupPos).getName(), </span><span class="s0">false</span><span class="s1">)); 
+                            intent.putExtra(</span><span class="s4">&quot;Voc&quot;</span><span class="s1">,coupons.get(groupPos).getVoc() ); 
+                            </span><span class="s2">//intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);</span><span class="s1"> 
+                            c.startActivity(intent); 
+                        } 
+                    } 
+            ); 
+ 
+ 
+ 
+            </span><span class="s2">//TODO implement redeem button MAKE INTENT TO CARRY TO VOUCHER PAGE&amp;MAKE VOUCHER PAGE</span><span class="s1"> 
+ 
+            </span><span class="s0">return </span><span class="s1">convertView; 
+        } 
+        </span><span class="s2">//GET NUMBER OF deals</span><span class="s1"> 
+        @Override 
+        </span><span class="s0">public int </span><span class="s1">getChildrenCount(</span><span class="s0">int </span><span class="s1">groupPosw) { 
+            </span><span class="s2">// TODO Auto-generated method stub</span><span class="s1"> 
+            </span><span class="s0">return </span><span class="s1">coupons.get(groupPosw).deals.size(); 
+        } 
+        </span><span class="s2">//GET coupons</span><span class="s1"> 
+        @Override 
+        </span><span class="s0">public </span><span class="s1">Object getGroup(</span><span class="s0">int </span><span class="s1">groupPos) { 
+            </span><span class="s2">// TODO Auto-generated method stub</span><span class="s1"> 
+            </span><span class="s0">return </span><span class="s1">coupons.get(groupPos); 
+        } 
+        </span><span class="s2">//GET NUMBER OF couponsS</span><span class="s1"> 
+        @Override 
+        </span><span class="s0">public int </span><span class="s1">getGroupCount() { 
+            </span><span class="s2">// TODO Auto-generated method stub</span><span class="s1"> 
+            </span><span class="s0">return </span><span class="s1">coupons.size(); 
+        } 
+        </span><span class="s2">//GET coupons ID</span><span class="s1"> 
+        @Override 
+        </span><span class="s0">public long </span><span class="s1">getGroupId(</span><span class="s0">int </span><span class="s1">arg0) { 
+            </span><span class="s2">// TODO Auto-generated method stub</span><span class="s1"> 
+            </span><span class="s0">return </span><span class="s3">0</span><span class="s1">; 
+        } 
+        </span><span class="s2">//GET coupons ROW</span><span class="s1"> 
+        @Override 
+        </span><span class="s0">public </span><span class="s1">View getGroupView(</span><span class="s0">int </span><span class="s1">groupPosition, </span><span class="s0">boolean </span><span class="s1">isExpanded, View convertView, ViewGroup parent) { 
+            </span><span class="s2">//ONLY INFLATE XML coupons ROW MODEL IF ITS NOT PRESENT,OTHERWISE REUSE IT</span><span class="s1"> 
+            </span><span class="s0">if</span><span class="s1">(convertView == </span><span class="s0">null</span><span class="s1">) 
+            { 
+                convertView=inflater.inflate(R.layout.coupon, </span><span class="s0">null</span><span class="s1">); 
+            } 
+            </span><span class="s2">//GET GROUP/coupons ITEM</span><span class="s1"> 
+            Coupons t=(Coupons) getGroup(groupPosition); 
+            </span><span class="s2">//SET GROUP NAME</span><span class="s1"> 
+            TextView nameTv=(TextView) convertView.findViewById(R.id.textView1); 
+            ImageView img=(ImageView) convertView.findViewById(R.id.imageView1); 
+            TextView dateTv=(TextView) convertView.findViewById(R.id.textView2); 
+            Date date = t.getExpire(); 
+            String stringDate = DateFormat.getDateInstance().format(date); 
+ 
+            String name=t.name; 
+            nameTv.setText(name); 
+            dateTv.setText(</span><span class="s4">&quot;Expires: &quot; </span><span class="s1">+stringDate); 
+            </span><span class="s2">//ASSIGN coupons IMAGES ACCORDING TO coupons NAME</span><span class="s1"> 
+            </span><span class="s2">//TODO find way to connect to online database</span><span class="s1"> 
+            </span><span class="s0">switch </span><span class="s1">(name) { 
+                </span><span class="s0">case </span><span class="s4">&quot;Coupon 1&quot;</span><span class="s1">: 
+                    img.setImageResource(R.drawable.cop1); 
+                    </span><span class="s0">break</span><span class="s1">; 
+                </span><span class="s0">case </span><span class="s4">&quot;Coupon 2&quot;</span><span class="s1">: 
+                    img.setImageResource(R.drawable.cop2); 
+                    </span><span class="s0">break</span><span class="s1">; 
+                </span><span class="s0">case </span><span class="s4">&quot;Coupon 3&quot;</span><span class="s1">: 
+                    img.setImageResource(R.drawable.cop3); 
+                    </span><span class="s0">break</span><span class="s1">; 
+                </span><span class="s0">case </span><span class="s4">&quot;Coupon 4&quot;</span><span class="s1">: 
+                    img.setImageResource(R.drawable.cop4); 
+                    </span><span class="s0">break</span><span class="s1">; 
+                </span><span class="s0">case </span><span class="s4">&quot;Coupon 5&quot;</span><span class="s1">: 
+                    img.setImageResource(R.drawable.cop5); 
+                    </span><span class="s0">break</span><span class="s1">; 
+                </span><span class="s0">case </span><span class="s4">&quot;Coupon 6&quot;</span><span class="s1">: 
+                    img.setImageResource(R.drawable.cop6); 
+                    </span><span class="s0">break</span><span class="s1">; 
+                </span><span class="s0">case </span><span class="s4">&quot;Coupon 7&quot;</span><span class="s1">: 
+                    img.setImageResource(R.drawable.cop7); 
+                    </span><span class="s0">break</span><span class="s1">; 
+                </span><span class="s0">case </span><span class="s4">&quot;Coupon 8&quot;</span><span class="s1">: 
+                    img.setImageResource(R.drawable.cop8); 
+                    </span><span class="s0">break</span><span class="s1">; 
+                </span><span class="s0">case </span><span class="s4">&quot;Coupon 9&quot;</span><span class="s1">: 
+                    img.setImageResource(R.drawable.cop9); 
+                    </span><span class="s0">break</span><span class="s1">; 
+                </span><span class="s0">case </span><span class="s4">&quot;Coupon 10&quot;</span><span class="s1">: 
+                    img.setImageResource(R.drawable.cop10); 
+                    </span><span class="s0">break</span><span class="s1">; 
+                </span><span class="s0">case </span><span class="s4">&quot;Coupon 11&quot;</span><span class="s1">: 
+                    img.setImageResource(R.drawable.cop11); 
+                    </span><span class="s0">break</span><span class="s1">; 
+            } 
+ 
+            </span><span class="s2">//SET coupons ROW BACKGROUND COLOR</span><span class="s1"> 
+            convertView.setBackgroundColor(Color.LTGRAY); 
+            </span><span class="s0">return </span><span class="s1">convertView; 
+        } 
+        @Override 
+        </span><span class="s0">public boolean </span><span class="s1">hasStableIds() { 
+            </span><span class="s2">// TODO Auto-generated method stub</span><span class="s1"> 
+            </span><span class="s0">return false</span><span class="s1">; 
+        } 
+        @Override 
+        </span><span class="s0">public boolean </span><span class="s1">isChildSelectable(</span><span class="s0">int </span><span class="s1">arg0, </span><span class="s0">int </span><span class="s1">arg1) { 
+            </span><span class="s2">// TODO Auto-generated method stub</span><span class="s1"> 
+            </span><span class="s0">return true</span><span class="s1">; 
+        } 
+ 
+}</span></pre>
+</body>
+</html>

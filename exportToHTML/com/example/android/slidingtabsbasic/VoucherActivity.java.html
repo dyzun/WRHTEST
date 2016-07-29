@@ -1,0 +1,113 @@
+<html>
+<head>
+<title>VoucherActivity.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.ln { color: rgb(0,0,0); font-weight: normal; font-style: normal; }
+.s0 { color: rgb(0,0,128); font-weight: bold; }
+.s1 { color: rgb(0,0,0); }
+.s2 { color: rgb(0,128,0); font-weight: bold; }
+.s3 { color: rgb(128,128,128); font-style: italic; }
+</style>
+</head>
+<BODY BGCOLOR="#ffffff">
+<TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#C0C0C0" >
+<TR><TD><CENTER>
+<FONT FACE="Arial, Helvetica" COLOR="#000000">
+VoucherActivity.java</FONT>
+</center></TD></TR></TABLE>
+<pre>
+<span class="s0">package </span><span class="s1">com.example.android.slidingtabsbasic; 
+ 
+</span><span class="s0">import </span><span class="s1">android.content.Intent; 
+</span><span class="s0">import </span><span class="s1">android.os.Bundle; 
+</span><span class="s0">import </span><span class="s1">android.support.design.widget.FloatingActionButton; 
+</span><span class="s0">import </span><span class="s1">android.support.design.widget.Snackbar; 
+</span><span class="s0">import </span><span class="s1">android.support.v7.app.AppCompatActivity; 
+</span><span class="s0">import </span><span class="s1">android.support.v7.widget.Toolbar; 
+</span><span class="s0">import </span><span class="s1">android.view.View; 
+</span><span class="s0">import </span><span class="s1">android.widget.ImageView; 
+</span><span class="s0">import </span><span class="s1">android.widget.TextView; 
+ 
+</span><span class="s0">public class </span><span class="s1">VoucherActivity </span><span class="s0">extends </span><span class="s1">AppCompatActivity { 
+ 
+    @Override 
+    </span><span class="s0">protected void </span><span class="s1">onCreate(Bundle savedInstanceState) { 
+        </span><span class="s0">super</span><span class="s1">.onCreate(savedInstanceState); 
+        setContentView(R.layout.activity_voucher); 
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar); 
+        setSupportActionBar(toolbar); 
+ 
+        ImageView img=(ImageView) findViewById(R.id.imageView1); 
+        TextView nameTv=(TextView) findViewById(R.id.textView1); 
+        </span><span class="s0">assert </span><span class="s1">nameTv !=</span><span class="s0">null</span><span class="s1">; 
+        TextView dateTv=(TextView) findViewById(R.id.textView2); 
+        </span><span class="s0">assert </span><span class="s1">dateTv !=</span><span class="s0">null</span><span class="s1">; 
+        TextView dets=(TextView)findViewById(R.id.details); 
+        </span><span class="s0">assert </span><span class="s1">dets !=</span><span class="s0">null</span><span class="s1">; 
+        TextView voucher = (TextView)findViewById(R.id.textView3); 
+        </span><span class="s0">assert </span><span class="s1">voucher !=</span><span class="s0">null</span><span class="s1">; 
+ 
+        Intent intent = getIntent(); 
+        Bundle bundle = intent.getExtras(); 
+ 
+        </span><span class="s0">if</span><span class="s1">(bundle != </span><span class="s0">null</span><span class="s1">){ 
+            nameTv.setText(bundle.getString(</span><span class="s2">&quot;name&quot;</span><span class="s1">)); 
+            dateTv.setText(</span><span class="s2">&quot;Expires: &quot; </span><span class="s1">+bundle.getString(</span><span class="s2">&quot;date&quot;</span><span class="s1">)); 
+            dets.setText(bundle.getString(</span><span class="s2">&quot;dets&quot;</span><span class="s1">)); 
+            voucher.append(bundle.getString(</span><span class="s2">&quot;Voc&quot;</span><span class="s1">)); 
+            </span><span class="s0">switch </span><span class="s1">(bundle.getString(</span><span class="s2">&quot;name&quot;</span><span class="s1">)) { 
+                </span><span class="s0">case </span><span class="s2">&quot;Coupon 1&quot;</span><span class="s1">: 
+                    img.setImageResource(R.drawable.cop1); 
+                    </span><span class="s0">break</span><span class="s1">; 
+                </span><span class="s0">case </span><span class="s2">&quot;Coupon 2&quot;</span><span class="s1">: 
+                    img.setImageResource(R.drawable.cop2); 
+                    </span><span class="s0">break</span><span class="s1">; 
+                </span><span class="s0">case </span><span class="s2">&quot;Coupon 3&quot;</span><span class="s1">: 
+                    img.setImageResource(R.drawable.cop3); 
+                    </span><span class="s0">break</span><span class="s1">; 
+                </span><span class="s0">case </span><span class="s2">&quot;Coupon 4&quot;</span><span class="s1">: 
+                    img.setImageResource(R.drawable.cop4); 
+                    </span><span class="s0">break</span><span class="s1">; 
+                </span><span class="s0">case </span><span class="s2">&quot;Coupon 5&quot;</span><span class="s1">: 
+                    img.setImageResource(R.drawable.cop5); 
+                    </span><span class="s0">break</span><span class="s1">; 
+                </span><span class="s0">case </span><span class="s2">&quot;Coupon 6&quot;</span><span class="s1">: 
+                    img.setImageResource(R.drawable.cop6); 
+                    </span><span class="s0">break</span><span class="s1">; 
+                </span><span class="s0">case </span><span class="s2">&quot;Coupon 7&quot;</span><span class="s1">: 
+                    img.setImageResource(R.drawable.cop7); 
+                    </span><span class="s0">break</span><span class="s1">; 
+                </span><span class="s0">case </span><span class="s2">&quot;Coupon 8&quot;</span><span class="s1">: 
+                    img.setImageResource(R.drawable.cop8); 
+                    </span><span class="s0">break</span><span class="s1">; 
+                </span><span class="s0">case </span><span class="s2">&quot;Coupon 9&quot;</span><span class="s1">: 
+                    img.setImageResource(R.drawable.cop9); 
+                    </span><span class="s0">break</span><span class="s1">; 
+                </span><span class="s0">case </span><span class="s2">&quot;Coupon 10&quot;</span><span class="s1">: 
+                    img.setImageResource(R.drawable.cop10); 
+                    </span><span class="s0">break</span><span class="s1">; 
+                </span><span class="s0">case </span><span class="s2">&quot;Coupon 11&quot;</span><span class="s1">: 
+                    img.setImageResource(R.drawable.cop11); 
+                    </span><span class="s0">break</span><span class="s1">; 
+            } 
+        } 
+ 
+ 
+ 
+ 
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab); 
+        fab.setOnClickListener(</span><span class="s0">new </span><span class="s1">View.OnClickListener() { 
+            @Override 
+            </span><span class="s0">public void </span><span class="s1">onClick(View view) { 
+                Snackbar.make(view, </span><span class="s2">&quot;Replace with your own action&quot;</span><span class="s1">, Snackbar.LENGTH_LONG) 
+                        .setAction(</span><span class="s2">&quot;Action&quot;</span><span class="s1">, </span><span class="s0">null</span><span class="s1">).show(); 
+            } 
+        }); 
+        </span><span class="s3">//getSupportActionBar().setDisplayHomeAsUpEnabled(true);</span><span class="s1"> 
+    } 
+ 
+} 
+</span></pre>
+</body>
+</html>

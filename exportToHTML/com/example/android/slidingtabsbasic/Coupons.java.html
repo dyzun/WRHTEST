@@ -1,0 +1,101 @@
+<html>
+<head>
+<title>Coupons.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.ln { color: rgb(0,0,0); font-weight: normal; font-style: normal; }
+.s0 { color: rgb(0,0,128); font-weight: bold; }
+.s1 { color: rgb(0,0,0); }
+.s2 { color: rgb(128,128,128); font-style: italic; }
+.s3 { color: rgb(0,128,0); font-weight: bold; }
+</style>
+</head>
+<BODY BGCOLOR="#ffffff">
+<TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#C0C0C0" >
+<TR><TD><CENTER>
+<FONT FACE="Arial, Helvetica" COLOR="#000000">
+Coupons.java</FONT>
+</center></TD></TR></TABLE>
+<pre>
+<span class="s0">package </span><span class="s1">com.example.android.slidingtabsbasic; 
+ 
+</span><span class="s0">import </span><span class="s1">java.util.ArrayList; 
+</span><span class="s0">import </span><span class="s1">java.util.Date; 
+ 
+</span><span class="s2">/** 
+ * Created by Mike on 7/5/2016. 
+ */</span><span class="s1"> 
+</span><span class="s0">public class </span><span class="s1">Coupons { 
+    String category; 
+    </span><span class="s0">boolean </span><span class="s1">saved; 
+    </span><span class="s0">boolean </span><span class="s1">featured =</span><span class="s0">false</span><span class="s1">; 
+    </span><span class="s0">boolean </span><span class="s1">redeemed =</span><span class="s0">false</span><span class="s1">; 
+    String name; 
+    </span><span class="s0">public </span><span class="s1">ArrayList&lt;String&gt; deals=</span><span class="s0">new </span><span class="s1">ArrayList&lt;String&gt;(); 
+    </span><span class="s0">int </span><span class="s1">pin; 
+    String voc; 
+    Date expire; 
+ 
+ 
+    </span><span class="s0">public </span><span class="s1">Coupons(String name){ 
+        </span><span class="s0">this</span><span class="s1">.name = name; 
+    } 
+ 
+    </span><span class="s0">public </span><span class="s1">String getCategory() { 
+        </span><span class="s0">return </span><span class="s1">category; 
+    } 
+ 
+    </span><span class="s0">public void </span><span class="s1">setCategory(String category) { 
+        </span><span class="s0">this</span><span class="s1">.category = category; 
+    } 
+ 
+    </span><span class="s0">public boolean </span><span class="s1">isSaved() { 
+        </span><span class="s0">return </span><span class="s1">saved; 
+    } 
+ 
+    </span><span class="s0">public void </span><span class="s1">setSaved(</span><span class="s0">boolean </span><span class="s1">saved) { 
+        </span><span class="s0">this</span><span class="s1">.saved = saved; 
+    } 
+ 
+    </span><span class="s0">public boolean </span><span class="s1">isFeatured() { 
+        </span><span class="s0">return </span><span class="s1">featured; 
+    } 
+ 
+    </span><span class="s0">public void </span><span class="s1">setFeatured(</span><span class="s0">boolean </span><span class="s1">featured) { 
+        </span><span class="s0">this</span><span class="s1">.featured = featured; 
+    } 
+ 
+    </span><span class="s0">public int </span><span class="s1">getPin() { 
+        </span><span class="s0">return </span><span class="s1">pin; 
+    } 
+ 
+    </span><span class="s0">public void </span><span class="s1">setPin(</span><span class="s0">int </span><span class="s1">pin) { 
+        </span><span class="s0">this</span><span class="s1">.pin = pin; 
+    } 
+ 
+    </span><span class="s0">public void </span><span class="s1">setVoc(String pinStr){     </span><span class="s0">this</span><span class="s1">.voc = </span><span class="s3">&quot;WRH&quot;</span><span class="s1">+pinStr; 
+    } 
+ 
+    </span><span class="s0">public </span><span class="s1">String getVoc() { 
+        </span><span class="s0">return </span><span class="s1">voc; 
+    } 
+ 
+    </span><span class="s0">public </span><span class="s1">String getName() { 
+        </span><span class="s0">return </span><span class="s1">name; 
+    } 
+ 
+    </span><span class="s0">public void </span><span class="s1">setName(String name) { 
+        </span><span class="s0">this</span><span class="s1">.name = name; 
+    } 
+ 
+    </span><span class="s0">public </span><span class="s1">Date getExpire() { </span><span class="s0">return </span><span class="s1">expire; } 
+ 
+    </span><span class="s0">public void </span><span class="s1">setExpire(Date expire){ 
+        </span><span class="s0">this</span><span class="s1">.expire = expire; 
+    } 
+    </span><span class="s0">public boolean </span><span class="s1">isRedeemed(){</span><span class="s0">return </span><span class="s1">redeemed;} 
+    </span><span class="s0">public void </span><span class="s1">setRedeemed(</span><span class="s0">boolean </span><span class="s1">redeemed){ </span><span class="s0">this</span><span class="s1">.redeemed = redeemed;} 
+} 
+</span></pre>
+</body>
+</html>

@@ -96,7 +96,7 @@ public class SlidingTabsBasicFragment extends Fragment {
             ExpandableListView elv=(ExpandableListView) view.findViewById(R.id.expandableListView1);
             final ArrayList<Coupons> Coupons=getData(position);
 
-            View header = getActivity().getLayoutInflater().inflate(R.layout.header, null);
+            View header = getActivity().getLayoutInflater().inflate(R.layout.header,null);
 
             ImageView img=(ImageView) header.findViewById(R.id.catPic);
             switch(position){
@@ -126,6 +126,7 @@ public class SlidingTabsBasicFragment extends Fragment {
                     break;
             }
             elv.addHeaderView(header);
+
             //CREATE AND BIND TO ADAPTER
             CustomExpandableListAdapter adapter = new CustomExpandableListAdapter(getActivity(), Coupons);
             elv.setAdapter(adapter);

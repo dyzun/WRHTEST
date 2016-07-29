@@ -1,0 +1,174 @@
+<html>
+<head>
+<title>MainActivity.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.ln { color: rgb(0,0,0); font-weight: normal; font-style: normal; }
+.s0 { color: rgb(0,0,128); font-weight: bold; }
+.s1 { color: rgb(0,0,0); }
+.s2 { color: rgb(0,128,0); font-weight: bold; }
+.s3 { color: rgb(128,128,128); font-style: italic; }
+.s4 { color: rgb(0,0,255); }
+</style>
+</head>
+<BODY BGCOLOR="#ffffff">
+<TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#C0C0C0" >
+<TR><TD><CENTER>
+<FONT FACE="Arial, Helvetica" COLOR="#000000">
+MainActivity.java</FONT>
+</center></TD></TR></TABLE>
+<pre>
+<span class="s0">package </span><span class="s1">com.example.android.slidingtabsbasic; 
+ 
+</span><span class="s0">import </span><span class="s1">android.content.Intent; 
+</span><span class="s0">import </span><span class="s1">android.content.res.Configuration; 
+</span><span class="s0">import </span><span class="s1">android.os.Bundle; 
+</span><span class="s0">import </span><span class="s1">android.support.v4.app.FragmentTransaction; 
+</span><span class="s0">import </span><span class="s1">android.support.v4.widget.DrawerLayout; 
+</span><span class="s0">import </span><span class="s1">android.support.v7.app.ActionBarDrawerToggle; 
+</span><span class="s0">import </span><span class="s1">android.support.v7.app.AppCompatActivity; 
+</span><span class="s0">import </span><span class="s1">android.support.v7.app.ActionBar; 
+</span><span class="s0">import </span><span class="s1">android.view.Menu; 
+</span><span class="s0">import </span><span class="s1">android.view.MenuItem; 
+</span><span class="s0">import </span><span class="s1">android.view.View; 
+</span><span class="s0">import </span><span class="s1">android.widget.AdapterView; 
+</span><span class="s0">import </span><span class="s1">android.widget.ArrayAdapter; 
+</span><span class="s0">import </span><span class="s1">android.widget.ListView; 
+</span><span class="s0">import </span><span class="s1">android.widget.Toast; 
+ 
+</span><span class="s0">public class </span><span class="s1">MainActivity </span><span class="s0">extends </span><span class="s1">AppCompatActivity { 
+ 
+    </span><span class="s0">public static final </span><span class="s1">String TAG = </span><span class="s2">&quot;MainActivity&quot;</span><span class="s1">; 
+    </span><span class="s0">private </span><span class="s1">ListView mDrawerList; 
+    </span><span class="s0">private </span><span class="s1">DrawerLayout mDrawerLayout; 
+    </span><span class="s0">private </span><span class="s1">ArrayAdapter&lt;String&gt; mAdapter; 
+    </span><span class="s0">private </span><span class="s1">ActionBarDrawerToggle mDrawerToggle; 
+    </span><span class="s0">private </span><span class="s1">String mActivityTitle; 
+ 
+    @Override 
+    </span><span class="s0">protected void </span><span class="s1">onCreate(Bundle savedInstanceState) { 
+        </span><span class="s0">super</span><span class="s1">.onCreate(savedInstanceState); 
+        setContentView(R.layout.activity_main); 
+ 
+       </span><span class="s3">// Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);</span><span class="s1"> 
+       </span><span class="s3">// setSupportActionBar(myToolbar);</span><span class="s1"> 
+        mDrawerList = (ListView)findViewById(R.id.navList); 
+        mDrawerLayout = (DrawerLayout)findViewById(R.id.drawer_layout); 
+        mActivityTitle = getTitle().toString(); 
+        addDrawerItems(); 
+        setupDrawer(); 
+        ActionBar actionBar =getSupportActionBar(); 
+        </span><span class="s0">assert </span><span class="s1">actionBar != </span><span class="s0">null</span><span class="s1">; 
+        actionBar.setDisplayHomeAsUpEnabled(</span><span class="s0">true</span><span class="s1">); 
+        actionBar.setHomeButtonEnabled(</span><span class="s0">false</span><span class="s1">); 
+ 
+        </span><span class="s0">if </span><span class="s1">(savedInstanceState == </span><span class="s0">null</span><span class="s1">) { 
+            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction(); 
+            SlidingTabsBasicFragment fragment = </span><span class="s0">new </span><span class="s1">SlidingTabsBasicFragment(); 
+            transaction.replace(R.id.sample_content_fragment, fragment); 
+            transaction.commit(); 
+        } 
+ 
+    } 
+    </span><span class="s0">private void </span><span class="s1">addDrawerItems() { 
+        String[] catArray = { </span><span class="s2">&quot;My Henry's&quot;</span><span class="s1">,</span><span class="s2">&quot;Invite Neighbors&quot;</span><span class="s1">,</span><span class="s2">&quot;Contact WRH&quot;</span><span class="s1">,</span><span class="s2">&quot;About Us&quot; </span><span class="s1">}; 
+        mAdapter = </span><span class="s0">new </span><span class="s1">ArrayAdapter&lt;String&gt;(</span><span class="s0">this</span><span class="s1">, android.R.layout.simple_list_item_1, catArray); 
+        mDrawerList.setAdapter(mAdapter); 
+ 
+        mDrawerList.setOnItemClickListener(</span><span class="s0">new </span><span class="s1">AdapterView.OnItemClickListener() { 
+            @Override 
+            </span><span class="s0">public void </span><span class="s1">onItemClick(AdapterView&lt;?&gt; parent, View view, </span><span class="s0">int </span><span class="s1">position, </span><span class="s0">long </span><span class="s1">id) { 
+                </span><span class="s0">switch</span><span class="s1">(position){ 
+                    </span><span class="s0">case </span><span class="s4">0</span><span class="s1">: 
+                        Intent intentS = </span><span class="s0">new </span><span class="s1">Intent(MainActivity.</span><span class="s0">this</span><span class="s1">, SavedActivity.</span><span class="s0">class</span><span class="s1">); 
+                        intentS.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); 
+                        startActivity(intentS); 
+                        </span><span class="s0">break</span><span class="s1">; 
+                    </span><span class="s0">case </span><span class="s4">1</span><span class="s1">: 
+                        Intent intentI = </span><span class="s0">new </span><span class="s1">Intent(MainActivity.</span><span class="s0">this</span><span class="s1">,InviteActivity.</span><span class="s0">class</span><span class="s1">); 
+                        intentI.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); 
+                        startActivity(intentI); 
+                        </span><span class="s0">break</span><span class="s1">; 
+                    </span><span class="s0">case </span><span class="s4">2</span><span class="s1">: 
+                        Intent intentC = </span><span class="s0">new </span><span class="s1">Intent(MainActivity.</span><span class="s0">this</span><span class="s1">,ContactActivity.</span><span class="s0">class</span><span class="s1">); 
+                        intentC.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); 
+                        startActivity(intentC); 
+                        </span><span class="s0">break</span><span class="s1">; 
+                    </span><span class="s0">case </span><span class="s4">3</span><span class="s1">: 
+                        Intent intentA = </span><span class="s0">new </span><span class="s1">Intent(MainActivity.</span><span class="s0">this</span><span class="s1">,AboutActivity.</span><span class="s0">class</span><span class="s1">); 
+                        intentA.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); 
+                        startActivity(intentA); 
+                        </span><span class="s0">break</span><span class="s1">; 
+                    </span><span class="s0">default</span><span class="s1">: 
+                        Toast.makeText(MainActivity.</span><span class="s0">this</span><span class="s1">, </span><span class="s2">&quot;Needs to be Implemented&quot;</span><span class="s1">, Toast.LENGTH_SHORT).show(); 
+                } 
+            } 
+        }); 
+    } 
+ 
+    </span><span class="s0">private void </span><span class="s1">setupDrawer() { 
+        mDrawerToggle = </span><span class="s0">new </span><span class="s1">ActionBarDrawerToggle(</span><span class="s0">this</span><span class="s1">, mDrawerLayout, R.string.navigation_drawer_open, R.string.navigation_drawer_close) { 
+            ActionBar actionBar =getSupportActionBar(); 
+            </span><span class="s3">/** Called when a drawer has settled in a completely open state. */</span><span class="s1"> 
+            </span><span class="s0">public void </span><span class="s1">onDrawerOpened(View drawerView) { 
+                </span><span class="s0">super</span><span class="s1">.onDrawerOpened(drawerView); 
+ 
+                actionBar.setTitle(</span><span class="s2">&quot;Navigation!&quot;</span><span class="s1">); 
+                invalidateOptionsMenu(); </span><span class="s3">// creates call to onPrepareOptionsMenu()</span><span class="s1"> 
+            } 
+ 
+            </span><span class="s3">/** Called when a drawer has settled in a completely closed state. */</span><span class="s1"> 
+            </span><span class="s0">public void </span><span class="s1">onDrawerClosed(View view) { 
+                </span><span class="s0">super</span><span class="s1">.onDrawerClosed(view); 
+                actionBar.setTitle(mActivityTitle); 
+                invalidateOptionsMenu(); </span><span class="s3">// creates call to onPrepareOptionsMenu()</span><span class="s1"> 
+            } 
+        }; 
+ 
+        mDrawerToggle.setDrawerIndicatorEnabled(</span><span class="s0">true</span><span class="s1">); 
+        mDrawerLayout.addDrawerListener(mDrawerToggle); 
+    } 
+ 
+    @Override 
+    </span><span class="s0">protected void </span><span class="s1">onPostCreate(Bundle savedInstanceState) { 
+        </span><span class="s0">super</span><span class="s1">.onPostCreate(savedInstanceState); 
+        </span><span class="s3">// Sync the toggle state after onRestoreInstanceState has occurred.</span><span class="s1"> 
+        mDrawerToggle.syncState(); 
+    } 
+ 
+    @Override 
+    </span><span class="s0">public void </span><span class="s1">onConfigurationChanged(Configuration newConfig) { 
+        </span><span class="s0">super</span><span class="s1">.onConfigurationChanged(newConfig); 
+        mDrawerToggle.onConfigurationChanged(newConfig); 
+    } 
+ 
+    @Override 
+    </span><span class="s0">public boolean </span><span class="s1">onCreateOptionsMenu(Menu menu) { 
+        </span><span class="s3">// Inflate the menu; this adds items to the action bar if it is present.</span><span class="s1"> 
+        getMenuInflater().inflate(R.menu.main, menu); 
+        </span><span class="s0">return true</span><span class="s1">; 
+    } 
+ 
+    @Override 
+    </span><span class="s0">public boolean </span><span class="s1">onOptionsItemSelected(MenuItem item) { 
+        </span><span class="s3">// Handle action bar item clicks here. The action bar will</span><span class="s1"> 
+        </span><span class="s3">// automatically handle clicks on the Home/Up button, so long</span><span class="s1"> 
+        </span><span class="s3">// as you specify a parent activity in AndroidManifest.xml.</span><span class="s1"> 
+        </span><span class="s0">int </span><span class="s1">id = item.getItemId(); 
+ 
+        </span><span class="s3">//noinspection SimplifiableIfStatement</span><span class="s1"> 
+        </span><span class="s0">if </span><span class="s1">(id == R.id.action_settings) { 
+            </span><span class="s0">return true</span><span class="s1">; 
+        } 
+ 
+        </span><span class="s3">// Activate the navigation drawer toggle</span><span class="s1"> 
+        </span><span class="s0">if </span><span class="s1">(mDrawerToggle.onOptionsItemSelected(item)) { 
+            </span><span class="s0">return true</span><span class="s1">; 
+        } 
+ 
+        </span><span class="s0">return super</span><span class="s1">.onOptionsItemSelected(item); 
+    } 
+} 
+</span></pre>
+</body>
+</html>
