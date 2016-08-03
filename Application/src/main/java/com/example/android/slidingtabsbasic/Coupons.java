@@ -12,7 +12,7 @@ public class Coupons {
     boolean featured =false;
     boolean redeemed =false;
     String name;
-    public ArrayList<String> deals=new ArrayList<String>();
+    public ArrayList<String> deals=new ArrayList<String>();//todo add detailed details for redeem screen
     int pin;
     String voc;
     Date expire;

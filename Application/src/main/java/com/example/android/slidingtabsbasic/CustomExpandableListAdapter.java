@@ -13,7 +13,6 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.text.DateFormat;
 import java.util.ArrayList;
@@ -56,15 +55,11 @@ public class CustomExpandableListAdapter extends BaseExpandableListAdapter {
           return coupons.get(groupPos).saved;
         }
 
-        //GET PLAYER ROW
+
         @Override
         public View getChildView(final int groupPos, int childPos, boolean isLastChild, View convertView,
                                  ViewGroup parent) {
-            //ONLY INFLATER XML ROW LAYOUT IF ITS NOT PRESENT,OTHERWISE REUSE IT
-            /*if(convertView==null)
-            {
-                convertView=inflater.inflate(R.layout.deal, null);
-            }*/
+
             final ChildHolder childHolder;
             if( convertView == null ){
                 convertView = inflater.inflate(R.layout.deal, null);
@@ -80,6 +75,9 @@ public class CustomExpandableListAdapter extends BaseExpandableListAdapter {
             childHolder.name.setText(child);
             boolean saved=(boolean) getSaved(groupPos);
             childHolder.checkBox1.setChecked(saved);
+            if(childHolder.checkBox1.isChecked()) {
+                childHolder.button.setVisibility(View.VISIBLE);
+            }
             assert childHolder.button != null;
             childHolder.checkBox1.setOnClickListener(
                     new View.OnClickListener() {
@@ -89,12 +87,13 @@ public class CustomExpandableListAdapter extends BaseExpandableListAdapter {
                             SharedPreferences.Editor editor = preferences.edit();
                             if(((CheckBox)v).isChecked()) {
                                 childHolder.checkBox1.setChecked(true);
+                                childHolder.button.setVisibility(View.VISIBLE);
                                 editor.putBoolean(coupons.get(groupPos).getName(), true);// edits preferences to hold data of saved coupon
                                 editor.apply();
-                                Toast.makeText(c,
-                                        "this is saved",Toast.LENGTH_LONG).show();// TODO remove when debugging is over
+
                             }
                             else{
+                                childHolder.button.setVisibility(View.INVISIBLE);
                                 editor.putBoolean(coupons.get(groupPos).getName(), false);// edits preferences to hold data of saved coupon
                                 editor.apply();
                             }

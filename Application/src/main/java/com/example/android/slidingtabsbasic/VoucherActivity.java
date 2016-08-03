@@ -1,7 +1,9 @@
 package com.example.android.slidingtabsbasic;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -20,6 +22,7 @@ public class VoucherActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         ImageView img=(ImageView) findViewById(R.id.imageView1);
+        assert img !=null;
         TextView nameTv=(TextView) findViewById(R.id.textView1);
         assert nameTv !=null;
         TextView dateTv=(TextView) findViewById(R.id.textView2);
@@ -74,17 +77,14 @@ public class VoucherActivity extends AppCompatActivity {
             }
         }
 
-
-
-
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         assert fab !=null;
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                /*String fromEmail = "wrhalert@gmail.com";
+                /*String fromEmail = "wrhalert@gmail.com";//TODO SEND MICHIE EMAIL & PASSWORD
                 String fromPassword = "WRHcountyGeorgia";
-                String toEmails = "dyzun71@gmail.com";
+                String toEmails = "wrhalert@gmail.com";
                 String adminEmail = "admin@gmail.com";
                 String emailSubject = "Voucher redeemed";
                 String adminSubject = "Voucher redeemed";
@@ -99,14 +99,30 @@ public class VoucherActivity extends AppCompatActivity {
                 } catch (Exception e) {
                     Log.e("SendMail", e.getMessage(), e);
                 }
-
+                //TODO GET BACKGROUND EMAIL WORKING
             */
-            Intent intent = new Intent(VoucherActivity.this,MainActivity.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                startActivity(intent);
+                SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());//todo fix this
+                SharedPreferences.Editor editor = preferences.edit();
+                TextView nameTv=(TextView) findViewById(R.id.textView1);
+                assert nameTv !=null;
+                Intent intent = getIntent();
+                Bundle bundle = intent.getExtras();
+                if(bundle !=null){
+                nameTv.setText(bundle.getString("name"));
+                String t1 = nameTv.getText().toString();//todo Check if this works
+                if(!preferences.getBoolean(t1, false)) {//adds save value to shared pref if not already there
+                    editor.putBoolean(t1, false);
+                    editor.apply();
+                }
+                    editor.putBoolean(t1, false);
+                    editor.apply();
+                }
+            Intent return1 = new Intent(VoucherActivity.this,MainActivity.class);
+                return1.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(return1);
             }
         });
-        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);//leave out to make user click redeem
     }
 
 }

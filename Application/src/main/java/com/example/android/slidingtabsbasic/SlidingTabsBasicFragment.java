@@ -54,7 +54,7 @@ public class SlidingTabsBasicFragment extends Fragment {
 
         @Override
         public int getCount() {
-            return 7;
+            return 8;
         }
 
         @Override
@@ -80,6 +80,8 @@ public class SlidingTabsBasicFragment extends Fragment {
                     break;
                 case 6: title = "Wellness";
                     break;
+                case 7: title = "My Henry's";
+                    break;
                 default:title = "Featured";
                     break;
             }
@@ -94,7 +96,7 @@ public class SlidingTabsBasicFragment extends Fragment {
 
             // Retrieve a TextView from the inflated View, and update it's text
             ExpandableListView elv=(ExpandableListView) view.findViewById(R.id.expandableListView1);
-            final ArrayList<Coupons> Coupons=getData(position);
+            final ArrayList<Coupons> Coupons=getData(view,position);
 
             View header = getActivity().getLayoutInflater().inflate(R.layout.header,null);
 
@@ -150,7 +152,7 @@ public class SlidingTabsBasicFragment extends Fragment {
             container.removeView((View) object);
         }
 
-        private String getPin(){
+        private String getPin(){//todo see if needed when migrated to sql
             int pin;
             Random r = new Random();
             pin = r.nextInt(9999);
@@ -159,13 +161,11 @@ public class SlidingTabsBasicFragment extends Fragment {
             return str;
         }
 
-        private ArrayList<Coupons> getData(int position)
+        private ArrayList<Coupons> getData(View v,int position)
         {
             SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
             SharedPreferences.Editor editor = preferences.edit();// uses preference to hold saved coupons
-            //still has issueing saving when app is closed
             //TODO GET COUPONS FROM DATABASE AND FIX SAVING OVER TO THAT
-
 
             Coupons t1=new Coupons("Coupon 1");
             t1.deals.add("Description of coupon 1\n");
@@ -378,7 +378,7 @@ public class SlidingTabsBasicFragment extends Fragment {
             allCoupons.add(t10);
             allCoupons.add(t11);
 
-            if(getSavedList()){//TODO use new array list of saved coupons
+            if(getSavedList()){
                 for(int i =allCoupons.size()-1; i>=0; i--){
                     saved = preferences.getBoolean(allCoupons.get(i).getName(), false);
                     if(!saved)
@@ -429,6 +429,13 @@ public class SlidingTabsBasicFragment extends Fragment {
                             allCoupons.remove(i);
                     }
                     break;
+                case 7:
+                    for(int i =allCoupons.size()-1; i>=0; i--){//MyHenry's category
+                        saved = preferences.getBoolean(allCoupons.get(i).getName(), false);
+                        if(!saved)
+                            allCoupons.remove(i);
+                    }
+                    break;
                 default:
                     for(int i =allCoupons.size()-1; i>=0; i--){
                         if(!allCoupons.get(i).isFeatured())
@@ -439,7 +446,7 @@ public class SlidingTabsBasicFragment extends Fragment {
             return allCoupons;
         }
 
-        private ArrayList<Coupons> saving(ArrayList<Coupons> coupons)
+        /*private ArrayList<Coupons> saving(ArrayList<Coupons> coupons)
         {
             ArrayList<Coupons> savedCoupons=new ArrayList<Coupons>();
             for(int i =coupons.size()-1; i>=0; i--){
@@ -448,6 +455,7 @@ public class SlidingTabsBasicFragment extends Fragment {
             }
             return savedCoupons;
         }
+        */
 
     }
 }

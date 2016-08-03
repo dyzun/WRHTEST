@@ -18,9 +18,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:text="Saved"
+        android:layout_marginRight="20dp"
+        android:text="Add to My Henry's"
         android:id="@+id/checkBox"/>
-        <!--android:onClick="onCheckboxClicked"/>TODO implement saving with checkbox-->
 
     <Button
         android:layout_width="wrap_content"
@@ -29,8 +29,9 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
+        android:visibility="invisible"
         android:text="Redeem"
         android:id="@+id/button" />
-    <!--TODO implement redeeming-->
+    <!--TODO see if can hide until saved-->
 
 </RelativeLayout>

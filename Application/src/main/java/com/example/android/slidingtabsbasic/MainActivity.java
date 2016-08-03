@@ -5,9 +5,9 @@ import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.app.ActionBar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
     }
     private void addDrawerItems() {
         String[] catArray = { "My Henry's","Invite Neighbors","Contact WRH","About Us" };
-        mAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, catArray);
+        mAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, catArray);
         mDrawerList.setAdapter(mAdapter);
 
         mDrawerList.setOnItemClickListener(new AdapterView.OnItemClickListener() {

@@ -24,15 +24,17 @@ public class ContactActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Intent.ACTION_SENDTO); // it's not ACTION_SEND
+                Intent intent = new Intent(Intent.ACTION_SENDTO);
                 intent.setType("text/plain");
                 EditText edt = (EditText) findViewById(R.id.editText4);
+                assert edt != null;
                 String abc = edt.getText().toString();
                 EditText edt1 = (EditText) findViewById(R.id.editText5);
+                assert edt1 != null;
                 String xyz = edt1.getText().toString();
                 intent.putExtra(Intent.EXTRA_SUBJECT, "Contact From to We Are Henry App");
                 intent.putExtra(Intent.EXTRA_TEXT, abc + ", is contacting you because of " + xyz);
-                intent.setData(Uri.parse("mailto:mdarbysmith95@gmail.com"));
+                intent.setData(Uri.parse("mailto:wrhalert@gmail.com"));
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
             }
